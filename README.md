@@ -6,7 +6,7 @@
 
 ## What is a hackbot?
 
-A **hackbot** is an automated system that uses AI (typically LLMs, often with tools, sandboxes, fuzzers, and traditional scanners) in a meaningful way to find and/or exploit vulnerabilities in real targets — bug-bounty programs, production apps, CTF challenges, or source code. The term was popularized in offensive-security writing by [Joseph Thacker](https://josephthacker.com/ai/2024/02/21/hackbots.html).
+A **hackbot** is an automated system that uses AI (typically LLMs, often with tools, sandboxes, fuzzers, and traditional scanners) in a meaningful way to find and/or exploit vulnerabilities in real targets — bug-bounty programs, production apps, CTF challenges, or source code. 
 
 This list prioritizes **verified, notable, actively maintained** projects. Every GitHub entry was checked via the GitHub API; dead/404 links are dropped. Star counts and ratings are refreshed by `scripts/update_stats.py` (data in `data/projects.json`).
 
