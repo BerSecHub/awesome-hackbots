@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated_at": "2026-10-26T19:48:47.865692+00:00",
+    "generated_at": "2026-10-27T06:27:58.890281+00:00",
     "timezone_note": "Europe/Warsaw (UTC+1)",
-    "entry_count": 208,
+    "entry_count": 215,
     "rating_rubric": {
       "scale": "1.0\u20135.0",
-      "open_source": "0.5 base + star_component(\u22642.0 using log10 of min(stars,50000)) + maintenance(\u22641.5) + prestige boost(\u22641.5); archived capped at 2.5",
+      "open_source": "0.5 base + star_component(\u22642.0 using log10 of min(stars,50000); stars above 100000 score 0 and display as n/a) + maintenance(\u22641.5) + prestige boost(\u22641.5); archived capped at 2.5",
       "maintenance": "\u226430d=1.5, \u226490d=1.2, \u2264180d=0.8, \u2264365d=0.4, older=0.1; archived=0",
       "commercial": "base 3.2 + prestige boost",
       "paper": "base 3.0 + prestige boost",
@@ -26,6 +26,26 @@
         "name": "HackerOne Hai old docs URL",
         "url": "https://docs.hackerone.com/en/articles/10055112-hai-ai-assistant",
         "reason": "404; replaced with hackerone.com/ai"
+      },
+      {
+        "name": "Beelzebub",
+        "url": "https://github.com/beelzebub-labs/beelzebub",
+        "reason": "LLM honeypot (defensive deception); not an offensive hackbot"
+      },
+      {
+        "name": "Taranis AI",
+        "url": "https://github.com/taranis-ai/taranis-ai",
+        "reason": "Defensive OSINT/CTI news-analysis platform; not an offensive hackbot"
+      },
+      {
+        "name": "hackAIthon / AI for Offense events",
+        "url": "https://www.hackthebox.com/",
+        "reason": "Vague Hack The Box homepage with no specific event; replaced by Neurogrid CTF and AI vs Humans CTF"
+      },
+      {
+        "name": "HackerOne Hai",
+        "url": "https://www.hackerone.com/",
+        "reason": "Duplicate of https://www.hackerone.com/ai; kept the /ai entry"
       }
     ]
   },
@@ -61,7 +81,7 @@
       "last_commit": "2026-10-19T22:57:44Z",
       "archived": false,
       "rating": 4.8,
-      "note": "EnIGMA CTF mode; SOTA on NYU CTF / Cybench"
+      "note": "SWE-agent with EnIGMA CTF mode (ICML'25): interactive tools for debugger/netcat-style CTF solving"
     },
     {
       "name": "PentAGI",
@@ -106,6 +126,17 @@
       "archived": false,
       "rating": 4.6,
       "note": "Trail of Bits AIxCC CRS (2nd place); fuzz + LLM patch"
+    },
+    {
+      "name": "Brendan Dolan-Gavitt (@moyix)",
+      "url": "https://xbow.com/authors/brendan-dolan-gavitt",
+      "category": "People & Communities",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 4.5,
+      "note": "XBOW AI researcher, ex-NYU prof; co-author of NYU CTF Bench and D-CIPHER, LLM-for-security pioneer"
     },
     {
       "name": "From Naptime to Big Sleep (Project Zero)",
@@ -160,7 +191,7 @@
       "last_commit": null,
       "archived": false,
       "rating": 4.5,
-      "note": "XBOW engineering blog on autonomous offensive AI"
+      "note": "XBOW write-ups: HackerOne #1 run, exploit case studies, benchmark methodology"
     },
     {
       "name": "IDA Pro MCP",
@@ -271,17 +302,6 @@
       "archived": false,
       "rating": 4.1,
       "note": "40 professional CTF tasks from 4 competitions for LLM agents"
-    },
-    {
-      "name": "REA",
-      "url": "https://github.com/morluto/rea",
-      "category": "Reverse Engineering Agents",
-      "type": "open-source",
-      "stars": 390758,
-      "last_commit": "2026-10-26T19:33:31Z",
-      "archived": false,
-      "rating": 4.0,
-      "note": "Local CLI/MCP for agent-assisted RE of native/.NET/JS [star count looks anomalously high \u2014 rating uses capped stars]"
     },
     {
       "name": "All About Hackbots (Joseph Thacker)",
@@ -515,6 +535,28 @@
       "note": "AIxCC finalist CRS with diverse LLM strategies [URL corrected]"
     },
     {
+      "name": "AgentCTF \u00d7 AgentXploit (Berkeley RDI)",
+      "url": "https://ctf.secure-agent.com/",
+      "category": "Competitions",
+      "type": "commercial",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.7,
+      "note": "Berkeley RDI competition: build A2A exploit agents vs real CVEs in 20+ AI/web frameworks"
+    },
+    {
+      "name": "Neurogrid CTF (Hack The Box)",
+      "url": "https://ctf.hackthebox.com/event/details/neurogrid-ctf-the-ultimate-ai-security-showdown-2712",
+      "category": "Competitions",
+      "type": "commercial",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.7,
+      "note": "HTB AI-first, MCP-only CTF (Nov 2025) benchmarking AI security agents; 156 AI teams vs humans"
+    },
+    {
       "name": "Decepticon",
       "url": "https://github.com/BitterSecurity/Decepticon",
       "category": "Autonomous Pentest Agents",
@@ -691,17 +733,6 @@
       "note": "Self-hosted platform orchestrating AI agents for code vuln research"
     },
     {
-      "name": "Beelzebub",
-      "url": "https://github.com/beelzebub-labs/beelzebub",
-      "category": "Autonomous Pentest Agents",
-      "type": "open-source",
-      "stars": 2218,
-      "last_commit": "2026-10-24T22:36:39Z",
-      "archived": false,
-      "rating": 3.4,
-      "note": "Offensive AI toolkit / LLM honeypot deception framework"
-    },
-    {
       "name": "OpenOSINT",
       "url": "https://github.com/OpenOSINT/OpenOSINT",
       "category": "Bug Bounty & Recon",
@@ -733,6 +764,17 @@
       "archived": false,
       "rating": 3.4,
       "note": "Broad AI security tools with caveats and star tracking"
+    },
+    {
+      "name": "AI vs Humans CTF (Palisade \u00d7 Hack The Box)",
+      "url": "https://github.com/PalisadeResearch/ai-vs-humans-ctf-report",
+      "category": "Competitions",
+      "type": "open-source",
+      "stars": 7,
+      "last_commit": "2026-10-01T00:52:42Z",
+      "archived": false,
+      "rating": 3.4,
+      "note": "First public AI-agent vs human CTF (Mar 2025, 403 teams); full data, agent designs and standings"
     },
     {
       "name": "T3MP3ST",
@@ -799,17 +841,6 @@
       "archived": false,
       "rating": 3.3,
       "note": "Self-hosted autonomous pentest agents with local dashboard"
-    },
-    {
-      "name": "Taranis AI",
-      "url": "https://github.com/taranis-ai/taranis-ai",
-      "category": "Bug Bounty & Recon",
-      "type": "open-source",
-      "note": "OSINT news collection with NLP/AI for situational analysis",
-      "stars": 1230,
-      "last_commit": "2026-10-23T14:10:28Z",
-      "archived": false,
-      "rating": 3.3
     },
     {
       "name": "ExploitGym",
@@ -1135,7 +1166,7 @@
       "url": "https://www.csaw.io/",
       "category": "Competitions",
       "type": "commercial",
-      "note": "NYU CSAW \u2014 LLM CTF Attack Competition and student CTF series",
+      "note": "NYU student cybersecurity games and conference; parent of the separate LLM CTF Attack Competition",
       "stars": null,
       "last_commit": null,
       "archived": false,
@@ -1186,28 +1217,6 @@
       "note": "API security testing with AI-driven discovery and scanning"
     },
     {
-      "name": "hackAIthon / AI for Offense events",
-      "url": "https://www.hackthebox.com/",
-      "category": "Competitions",
-      "type": "commercial",
-      "stars": null,
-      "last_commit": null,
-      "archived": false,
-      "rating": 3.2,
-      "note": "HTB and community AI-for-offense challenges (platform hub)"
-    },
-    {
-      "name": "HackerOne Hai",
-      "url": "https://www.hackerone.com/",
-      "category": "Commercial Hackbots",
-      "type": "commercial",
-      "stars": null,
-      "last_commit": null,
-      "archived": false,
-      "rating": 3.2,
-      "note": "HackerOne AI assistant (Hai) for triage and research workflows"
-    },
-    {
       "name": "HackerOne Hai",
       "url": "https://www.hackerone.com/ai",
       "category": "Commercial Hackbots",
@@ -1228,6 +1237,17 @@
       "archived": false,
       "rating": 3.2,
       "note": "Autonomous external attack-surface management and testing"
+    },
+    {
+      "name": "ProjectDiscovery Neo",
+      "url": "https://projectdiscovery.io/blog/neo-v1",
+      "category": "Commercial Hackbots",
+      "type": "commercial",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.2,
+      "note": "Nuclei makers' autonomous platform: parallel agents pentest apps/APIs, red-team, re-prove fixes"
     },
     {
       "name": "Snyk DeepCode AI",
@@ -1373,6 +1393,17 @@
       "note": "Red-team C2 with LLM operator + 153 MCP tools"
     },
     {
+      "name": "D-CIPHER (NYU CTF Agents)",
+      "url": "https://github.com/NYU-LLM-CTF/nyuctf_agents",
+      "category": "CTF Solvers & Agents",
+      "type": "open-source",
+      "stars": 174,
+      "last_commit": "2026-07-17T06:10:54Z",
+      "archived": false,
+      "rating": 3.1,
+      "note": "NYU planner/executor/auto-prompter multi-agent CTF solver; SOTA on NYU CTF Bench, Cybench, HTB"
+    },
+    {
       "name": "LuaN1aoAgent",
       "url": "https://github.com/SanMuzZzZz/LuaN1aoAgent",
       "category": "Autonomous Pentest Agents",
@@ -1392,7 +1423,7 @@
       "last_commit": "2026-08-12T20:44:09Z",
       "archived": false,
       "rating": 3.0,
-      "note": "LLM offensive-security toolkit"
+      "note": "Early (2023) GPT-driven toolkit of offensive prompts/scripts; mostly historical"
     },
     {
       "name": "CyberGym",
@@ -1560,6 +1591,17 @@
       "note": "A Scalable LLM-driven CTF Benchmark for Cybersecurity"
     },
     {
+      "name": "Palisade Research",
+      "url": "https://palisaderesearch.org/",
+      "category": "People & Communities",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.0,
+      "note": "AI-risk lab running AI-vs-human CTF tracks and offensive-capability elicitation studies"
+    },
+    {
       "name": "PENTEST-AI Framework Survey",
       "url": "https://arxiv.org/abs/2502.16725",
       "category": "Research Papers",
@@ -1623,7 +1665,7 @@
       "last_commit": "2026-10-07T09:41:03Z",
       "archived": false,
       "rating": 2.9,
-      "note": "Resources for AI in cybersecurity"
+      "note": "Mixed offensive/defensive AI-for-security list (tools, papers, datasets)"
     },
     {
       "name": "Forefy .context",
@@ -1714,6 +1756,17 @@
       "note": "Prompt engine turning Claude Code into human-in-the-loop pentester"
     },
     {
+      "name": "pentest-agents",
+      "url": "https://github.com/H-mmer/pentest-agents",
+      "category": "Bug Bounty & Recon",
+      "type": "open-source",
+      "stars": 1039,
+      "last_commit": "2026-06-12T08:59:58Z",
+      "archived": false,
+      "rating": 2.6,
+      "note": "Bug-bounty agent suite (~50 agents, 2 MCP servers) for Claude Code/Codex/Gemini/Cursor with hunt loops"
+    },
+    {
       "name": "pentestMCP",
       "url": "https://github.com/ramkansal/pentestMCP",
       "category": "Security MCP Servers",
@@ -1744,7 +1797,7 @@
       "last_commit": "2026-08-22T13:05:58Z",
       "archived": true,
       "rating": 2.5,
-      "note": "Cybersecurity AI framework (archived; research reference) [ARCHIVED]"
+      "note": "Alias Robotics agent framework; top AI team in HTB AI vs Humans CTF (19/20); archived Aug 2026 [ARCHIVED]"
     },
     {
       "name": "LLM4Decompile",
@@ -2022,6 +2075,17 @@
       "note": "Stanford Trinity autonomous vuln discovery with Codex subagents"
     },
     {
+      "name": "CTFusion",
+      "url": "https://github.com/kaist-hacking/CTFusion",
+      "category": "Benchmarks & Datasets",
+      "type": "open-source",
+      "stars": 4,
+      "last_commit": "2026-07-11T11:47:17Z",
+      "archived": false,
+      "rating": 2.1,
+      "note": "KAIST live-CTF streaming benchmark: CTFd MCP + proxy so agents compete without contamination"
+    },
+    {
       "name": "burpgpt",
       "url": "https://github.com/aress31/burpgpt",
       "category": "Code Auditing & SAST Agents",
@@ -2035,13 +2099,13 @@
     {
       "name": "ai-exploits",
       "url": "https://github.com/protectai/ai-exploits",
-      "category": "Bug Bounty & Recon",
+      "category": "Related Awesome Lists",
       "type": "open-source",
       "stars": 1753,
       "last_commit": "2024-10-23T20:40:54Z",
       "archived": false,
       "rating": 2.0,
-      "note": "Real-world AI/ML exploits (Metasploit + Nuclei) for MLflow/Ray/H2O"
+      "note": "Exploit collection targeting AI/ML infra (MLflow, Ray, H2O); not an AI-powered tool"
     },
     {
       "name": "awesome-llm-security",
@@ -2055,6 +2119,17 @@
       "note": "Tools and docs about LLM security (defense-leaning)"
     },
     {
+      "name": "Palisade ReAct&Plan (Hacking CTFs with Plain Agents)",
+      "url": "https://github.com/PalisadeResearch/intercode",
+      "category": "CTF Solvers & Agents",
+      "type": "open-source",
+      "stars": 71,
+      "last_commit": "2024-12-05T18:06:49Z",
+      "archived": false,
+      "rating": 2.0,
+      "note": "Simple ReAct&Plan agent that saturated InterCode-CTF (95%) with plain prompting + Kali tools"
+    },
+    {
       "name": "Inspect Cyber",
       "url": "https://github.com/UKGovernmentBEIS/inspect_cyber",
       "category": "Benchmarks & Datasets",
@@ -2066,15 +2141,37 @@
       "note": "UK AISI Inspect extension for agentic cyber evaluations"
     },
     {
+      "name": "REA",
+      "url": "https://github.com/morluto/rea",
+      "category": "Reverse Engineering Agents",
+      "type": "open-source",
+      "stars": 393112,
+      "last_commit": "2026-10-27T06:24:30Z",
+      "archived": false,
+      "rating": 2.0,
+      "note": "Local CLI/MCP for agent-assisted RE of native/.NET/JS. Star count looks anomalously high (created 2026-04-14) and is excluded from rating."
+    },
+    {
       "name": "ReconAIzer",
       "url": "https://github.com/hisxo/ReconAIzer",
-      "category": "Code Auditing & SAST Agents",
+      "category": "Bug Bounty & Recon",
       "type": "open-source",
       "stars": 905,
       "last_commit": "2023-05-03T03:03:41Z",
       "archived": false,
       "rating": 1.9,
       "note": "Burp extension using GPT to discover endpoints/params during recon"
+    },
+    {
+      "name": "pwno-mcp",
+      "url": "https://github.com/pwno-io/pwno-mcp",
+      "category": "Security MCP Servers",
+      "type": "open-source",
+      "stars": 282,
+      "last_commit": "2026-03-12T16:30:29Z",
+      "archived": false,
+      "rating": 1.9,
+      "note": "Stateful GDB/pwndbg MCP for binary exploitation: sessions, context snapshots, exploit I/O"
     },
     {
       "name": "Ankou",
@@ -2316,7 +2413,7 @@
       "last_commit": "2025-08-19T20:30:34Z",
       "archived": true,
       "rating": 1.0,
-      "note": "42-b3yond-6ug AIxCC related CRS components [ARCHIVED]"
+      "note": "42-b3yond-6ug CRS from the AIxCC Semifinal Competition (ASC) [ARCHIVED]"
     }
   ]
 }

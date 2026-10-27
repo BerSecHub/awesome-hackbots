@@ -68,7 +68,19 @@ BOOSTS = {
     "horizon3.ai": 0.8,
     "pentera.io": 0.6,
     "darpa.mil/news/2025/aixcc-results": 1.0,
+    # 2026-10-27 verified additions (modest; same 0.4–1.5 rubric)
+    "nyu-llm-ctf/nyuctf_agents": 0.8,
+    "palisaderesearch/intercode": 0.6,
+    "palisaderesearch/ai-vs-humans-ctf-report": 1.0,
+    "ctf.secure-agent.com": 0.5,
+    "neurogrid-ctf": 0.5,
+    "kaist-hacking/ctfusion": 0.5,
 }
+
+# Above this, a star total is not credible adoption for this list (REA: ~393k
+# on a repo created 2026-04-14). Those counts score 0, display as n/a, and
+# cannot place an entry on the leaderboard. The 50k cap still applies below it.
+ANOMALOUS_STARS = 100_000
 
 CATEGORY_ORDER = [
     "Autonomous Pentest Agents",
@@ -132,10 +144,14 @@ def fetch_repo(owner: str, repo: str) -> dict:
     }
 
 
+def stars_anomalous(stars: int | None) -> bool:
+    return bool(stars and int(stars) > ANOMALOUS_STARS)
+
+
 def star_component(stars: int | None) -> float:
-    if not stars or stars <= 0:
+    if not stars or stars <= 0 or stars_anomalous(stars):
         return 0.0
-    # Cap dampens star-farming / anomalous counts (e.g. 100k+)
+    # Cap dampens ordinary star-farming below the anomalous cutoff
     s = min(int(stars), 50_000)
     # log10(1)=0 … log10(50001)≈4.7 → map to 0…2.0
     return min(2.0, math.log10(s + 1) / math.log10(50_001) * 2.0)
@@ -195,6 +211,8 @@ def stars_badge(p: dict) -> str:
 def fmt_stars(n: int | None) -> str:
     if n is None:
         return "—"
+    if stars_anomalous(n):
+        return "n/a"
     if n >= 1000:
         return f"{n/1000:.1f}k".replace(".0k", "k")
     return str(n)
@@ -256,23 +274,39 @@ def refresh_github(doc: dict, sleep_s: float = 0.85) -> tuple[int, int]:
     return ok, fail
 
 
+_OLD_ANOMALY_FLAGS = (
+    "[star count looks anomalously high — rating uses capped stars]",
+    "[star count looks anomalously high - rating uses capped stars]",
+)
+
+
+def _sort_key(p: dict) -> tuple:
+    # Anomalous totals must not win ties the way a real star count would.
+    stars = 0 if stars_anomalous(p.get("stars")) else (p.get("stars") or 0)
+    return (-p["rating"], -stars, p["name"].lower())
+
+
 def apply_ratings(doc: dict) -> None:
     now = now_utc()
     for p in doc["projects"]:
         p["rating"] = compute_rating(p, now)
-        if p.get("archived") and "[ARCHIVED]" not in (p.get("note") or ""):
-            p["note"] = ((p.get("note") or "") + " [ARCHIVED]").strip()
-        if p.get("stars") and p["stars"] > 100_000:
-            flag = "[star count looks anomalously high — rating uses capped stars]"
-            if flag not in (p.get("note") or ""):
-                p["note"] = ((p.get("note") or "") + " " + flag).strip()
-    doc["projects"].sort(key=lambda p: (-p["rating"], -(p.get("stars") or 0), p["name"].lower()))
+        note = p.get("note") or ""
+        for flag in _OLD_ANOMALY_FLAGS:
+            note = note.replace(flag, "")
+        note = re.sub(r"\s{2,}", " ", note).strip()
+        if p.get("archived") and "[ARCHIVED]" not in note:
+            note = f"{note} [ARCHIVED]".strip()
+        if stars_anomalous(p.get("stars")) and "excluded from rating" not in note.lower():
+            note = f"{note} Star count excluded from rating (looks anomalously high).".strip()
+        p["note"] = note
+    doc["projects"].sort(key=_sort_key)
     doc.setdefault("meta", {})["entry_count"] = len(doc["projects"])
     doc["meta"]["generated_at"] = now.isoformat()
     doc["meta"]["rating_rubric"] = {
         "scale": "1.0–5.0",
         "open_source": (
-            "0.5 base + star_component(≤2.0 using log10 of min(stars,50000)) "
+            "0.5 base + star_component(≤2.0 using log10 of min(stars,50000); "
+            "stars above 100000 score 0 and display as n/a) "
             "+ maintenance(≤1.5) + prestige boost(≤1.5); archived capped at 2.5"
         ),
         "maintenance": "≤30d=1.5, ≤90d=1.2, ≤180d=0.8, ≤365d=0.4, older=0.1; archived=0",
@@ -301,6 +335,8 @@ def render_readme(doc: dict) -> str:
         "discovery, exploitation, CTF solving, code auditing, LLM-guided fuzzing, and red-team operations — "
         "plus the surrounding ecosystem of benchmarks, MCP servers, papers, competitions, and writing.",
         "",
+        "Curated by [Rafael Gacek](https://bersec.me)",
+        "",
         f"[![entries](https://img.shields.io/badge/entries-{len(projects)}-blue?style=flat-square)](#contents) "
         "[![license](https://img.shields.io/badge/license-CC0-lightgrey?style=flat-square)](LICENSE) "
         "[![maintainer](https://img.shields.io/badge/maintainer-BerSec-red?style=flat-square)](https://github.com/BerSecHub)",
@@ -309,8 +345,7 @@ def render_readme(doc: dict) -> str:
         "",
         "A **hackbot** is an automated system that uses AI (typically LLMs, often with tools, sandboxes, "
         "fuzzers, and traditional scanners) in a meaningful way to find and/or exploit vulnerabilities in "
-        "real targets — bug-bounty programs, production apps, CTF challenges, or source code. "
-        "The term was popularized in offensive-security writing by [Joseph Thacker](https://josephthacker.com/ai/2024/02/21/hackbots.html).",
+        "real targets — bug-bounty programs, production apps, CTF challenges, or source code.",
         "",
         "This list prioritizes **verified, notable, actively maintained** projects. Every GitHub entry was "
         "checked via the GitHub API; dead/404 links are dropped. Star counts and ratings are refreshed by "
@@ -355,6 +390,7 @@ def render_readme(doc: dict) -> str:
         if p["type"] == "open-source"
         and p["category"] in LEADERBOARD_CATEGORIES
         and not p.get("archived")
+        and not stars_anomalous(p.get("stars"))
     ][:15]
     for i, p in enumerate(lb, 1):
         lines.append(
@@ -370,7 +406,7 @@ def render_readme(doc: dict) -> str:
         "",
         "| Signal | How it scores |",
         "|--------|---------------|",
-        "| **Stars** (open-source) | `log10(min(stars, 50000))` scaled to **0–2.0**. Cap fights star inflation. |",
+        "| **Stars** (open-source) | `log10(min(stars, 50000))` scaled to **0–2.0**. Cap fights star inflation. Counts above 100k are anomalous: they score **0**, display as n/a, and cannot lead the leaderboard on stars. |",
         "| **Maintenance** | Last push ≤30d → 1.5; ≤90d → 1.2; ≤180d → 0.8; ≤365d → 0.4; older → 0.1. **Archived → 0** (and overall cap 2.5). |",
         "| **Prestige boost** | Manual +0.4–1.5 for AIxCC placements, USENIX/ICML/NDSS papers, Project Zero, XBOW, Cybench/CVE-Bench, etc. |",
         "| **Open-source base** | +0.5 |",
@@ -387,7 +423,7 @@ def render_readme(doc: dict) -> str:
         if not items:
             continue
         # sort: rating desc, stars desc, name
-        items = sorted(items, key=lambda p: (-p["rating"], -(p.get("stars") or 0), p["name"].lower()))
+        items = sorted(items, key=_sort_key)
         lines += [f"## {cat}", ""]
         # short blurb per category
         blurbs = {
@@ -405,7 +441,7 @@ def render_readme(doc: dict) -> str:
             "Talks, Blogs & Writing": "Essays, vendor write-ups, and research blogs that define the space.",
             "Competitions": "AI-for-offense competitions and challenge series.",
             "People & Communities": "Researchers, labs, and orgs shaping the hackbot ecosystem.",
-            "Related Awesome Lists": "Sibling curated lists (discovery sources — we write our own descriptions).",
+            "Related Awesome Lists": "Sibling curated lists and closely related resources (we write our own descriptions).",
         }
         if cat in blurbs:
             lines += [blurbs[cat], ""]
@@ -416,10 +452,14 @@ def render_readme(doc: dict) -> str:
         for p in items:
             typ = TYPE_LEGEND.get(p["type"], p["type"])
             arch = " ⚠️" if p.get("archived") else ""
-            badge = stars_badge(p) if p["type"] == "open-source" and GH_PAT.match(p["url"]) else "—"
-            star_n = fmt_stars(p.get("stars")) if p.get("stars") is not None else "—"
-            # Prefer badge for GH; show count in same cell
-            star_cell = f"{badge}<br>{star_n}" if badge != "—" else star_n
+            if stars_anomalous(p.get("stars")):
+                # Live Shields badge would republish the untrusted total.
+                star_cell = "n/a"
+            else:
+                badge = stars_badge(p) if p["type"] == "open-source" and GH_PAT.match(p["url"]) else "—"
+                star_n = fmt_stars(p.get("stars")) if p.get("stars") is not None else "—"
+                # Prefer badge for GH; show count in same cell
+                star_cell = f"{badge}<br>{star_n}" if badge != "—" else star_n
             desc = (p.get("note") or "").replace("|", "\\|")
             # strip internal flags from display slightly
             lines.append(
