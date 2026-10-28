@@ -75,6 +75,13 @@ BOOSTS = {
     "ctf.secure-agent.com": 0.5,
     "neurogrid-ctf": 0.5,
     "kaist-hacking/ctfusion": 0.5,
+    # 2026-10-28 verified additions (modest; same 0.4–1.5 rubric).
+    # nyuctf_agents_craken is longer than nyuctf_agents so the specific key wins.
+    "nyu-llm-ctf/nyuctf_agents_craken": 0.6,
+    "aivillage.org/blog/halctf": 0.5,
+    "cloud.tencent.com/developer/article/2661083": 0.5,
+    "sean.heelan.io": 0.8,
+    "seanheelan/anamnesis-release": 0.6,
 }
 
 # Above this, a star total is not credible adoption for this list (REA: ~393k
@@ -110,6 +117,7 @@ LEADERBOARD_CATEGORIES = {
 TYPE_LEGEND = {
     "open-source": "🟢 open-source",
     "commercial": "🟠 commercial",
+    "event": "🟣 event / community",
     "paper": "🔵 paper / writing",
 }
 
@@ -176,17 +184,28 @@ def maint_component(last_commit: str | None, archived: bool, now: datetime) -> f
 
 
 def boost_for(url: str) -> float:
+    """Longest matching key wins so a repo name that extends another keeps its own boost.
+
+    Example: nyuctf_agents (0.8) is a substring of nyuctf_agents_craken (0.6).
+    Equal-length ties still take the higher value.
+    """
     u = url.lower()
+    best_len = -1
     best = 0.0
     for k, v in BOOSTS.items():
-        if k in u:
-            best = max(best, v)
+        if k not in u:
+            continue
+        if len(k) > best_len or (len(k) == best_len and v > best):
+            best_len = len(k)
+            best = v
     return best
 
 
 def compute_rating(p: dict, now: datetime) -> float:
     typ = p.get("type", "open-source")
-    if typ == "commercial":
+    # event shares the commercial base. Without this, competitions would
+    # fall through to the open-source formula and collapse to ~1.0.
+    if typ in ("commercial", "event"):
         return round(min(5.0, max(1.0, 3.2 + boost_for(p["url"]))), 1)
     if typ == "paper":
         return round(min(5.0, max(1.0, 3.0 + boost_for(p["url"]))), 1)
@@ -311,6 +330,7 @@ def apply_ratings(doc: dict) -> None:
         ),
         "maintenance": "≤30d=1.5, ≤90d=1.2, ≤180d=0.8, ≤365d=0.4, older=0.1; archived=0",
         "commercial": "base 3.2 + prestige boost",
+        "event": "base 3.2 + prestige boost (competitions and community events; same formula as commercial)",
         "paper": "base 3.0 + prestige boost",
         "prestige_examples": "AIxCC placements, USENIX/ICML/NDSS, Project Zero, XBOW, major benchmarks",
     }
@@ -357,6 +377,7 @@ def render_readme(doc: dict) -> str:
         "|------|---------|",
         "| 🟢 | Open-source project / tool |",
         "| 🟠 | Commercial product / company |",
+        "| 🟣 | Competition, event or community |",
         "| 🔵 | Research paper, blog post, or long-form writing |",
         "| ⚠️ | Archived or unmaintained (still historically important) |",
         "| ★ rating | Transparent 1–5 score — see [Rating rubric](#rating-rubric) |",
@@ -411,6 +432,7 @@ def render_readme(doc: dict) -> str:
         "| **Prestige boost** | Manual +0.4–1.5 for AIxCC placements, USENIX/ICML/NDSS papers, Project Zero, XBOW, Cybench/CVE-Bench, etc. |",
         "| **Open-source base** | +0.5 |",
         "| **Commercial** | Base **3.2** + prestige (no GitHub stars required). |",
+        "| **Event / community** | Same base as commercial (**3.2**) + prestige. Competitions and community sites use this so they are not scored like GitHub repos. |",
         "| **Paper / writing** | Base **3.0** + prestige. |",
         "",
         "Shields.io star badges in category tables always reflect **live** GitHub data; the numeric star column "

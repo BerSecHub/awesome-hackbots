@@ -41,7 +41,7 @@ Required fields:
 }
 ```
 
-- `type`: `open-source` | `commercial` | `paper`
+- `type`: `open-source` | `commercial` | `event` | `paper` (`event` = competition, conference, or community site; rated like commercial, base 3.2)
 - `note`: original wording; do **not** copy descriptions wholesale from other awesome lists
 - After adding GitHub entries, run:
 

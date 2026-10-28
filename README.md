@@ -4,7 +4,7 @@
 
 Curated by [Rafael Gacek](https://bersec.me)
 
-[![entries](https://img.shields.io/badge/entries-215-blue?style=flat-square)](#contents) [![license](https://img.shields.io/badge/license-CC0-lightgrey?style=flat-square)](LICENSE) [![maintainer](https://img.shields.io/badge/maintainer-BerSec-red?style=flat-square)](https://github.com/BerSecHub)
+[![entries](https://img.shields.io/badge/entries-229-blue?style=flat-square)](#contents) [![license](https://img.shields.io/badge/license-CC0-lightgrey?style=flat-square)](LICENSE) [![maintainer](https://img.shields.io/badge/maintainer-BerSec-red?style=flat-square)](https://github.com/BerSecHub)
 
 ## What is a hackbot?
 
@@ -18,11 +18,12 @@ This list prioritizes **verified, notable, actively maintained** projects. Every
 |------|---------|
 | 🟢 | Open-source project / tool |
 | 🟠 | Commercial product / company |
+| 🟣 | Competition, event or community |
 | 🔵 | Research paper, blog post, or long-form writing |
 | ⚠️ | Archived or unmaintained (still historically important) |
 | ★ rating | Transparent 1–5 score — see [Rating rubric](#rating-rubric) |
 
-_Stats snapshot: **2026-10-27** (UTC). Re-run `python3 scripts/update_stats.py` to refresh._
+_Stats snapshot: **2026-10-28** (UTC). Re-run `python3 scripts/update_stats.py` to refresh._
 
 ## Contents
 
@@ -30,18 +31,18 @@ _Stats snapshot: **2026-10-27** (UTC). Re-run `python3 scripts/update_stats.py` 
 - [Rating rubric](#rating-rubric)
 - [Autonomous Pentest Agents](#autonomous-pentest-agents) (39)
 - [Commercial Hackbots](#commercial-hackbots) (14)
-- [Frameworks, Skills & Harnesses](#frameworks-skills-harnesses) (18)
+- [Frameworks, Skills & Harnesses](#frameworks-skills-harnesses) (19)
 - [Code Auditing & SAST Agents](#code-auditing-sast-agents) (18)
 - [LLM Fuzzing & Cyber Reasoning Systems](#llm-fuzzing-cyber-reasoning-systems) (13)
 - [Security MCP Servers](#security-mcp-servers) (12)
 - [Reverse Engineering Agents](#reverse-engineering-agents) (14)
-- [CTF Solvers & Agents](#ctf-solvers-agents) (7)
-- [Bug Bounty & Recon](#bug-bounty-recon) (10)
+- [CTF Solvers & Agents](#ctf-solvers-agents) (9)
+- [Bug Bounty & Recon](#bug-bounty-recon) (13)
 - [Benchmarks & Datasets](#benchmarks-datasets) (17)
-- [Research Papers](#research-papers) (15)
-- [Talks, Blogs & Writing](#talks-blogs-writing) (12)
-- [Competitions](#competitions) (7)
-- [People & Communities](#people-communities) (7)
+- [Research Papers](#research-papers) (17)
+- [Talks, Blogs & Writing](#talks-blogs-writing) (13)
+- [Competitions](#competitions) (10)
+- [People & Communities](#people-communities) (9)
 - [Related Awesome Lists](#related-awesome-lists) (12)
 - [Contributing](#contributing)
 - [Disclaimer](#disclaimer)
@@ -79,6 +80,7 @@ Each entry gets a **1.0–5.0** rating stored in `data/projects.json`:
 | **Prestige boost** | Manual +0.4–1.5 for AIxCC placements, USENIX/ICML/NDSS papers, Project Zero, XBOW, Cybench/CVE-Bench, etc. |
 | **Open-source base** | +0.5 |
 | **Commercial** | Base **3.2** + prestige (no GitHub stars required). |
+| **Event / community** | Same base as commercial (**3.2**) + prestige. Competitions and community sites use this so they are not scored like GitHub repos. |
 | **Paper / writing** | Base **3.0** + prestige. |
 
 Shields.io star badges in category tables always reflect **live** GitHub data; the numeric star column and rating come from the last `update_stats.py` run.
@@ -143,10 +145,10 @@ Vendors shipping autonomous or AI-assisted offensive testing / AppSec products.
 | [Checkmarx AI](https://checkmarx.com/) | 🟠 commercial | — | — | **3.2** | Enterprise AppSec with AI-assisted SAST/DAST |
 | [DryRun Security](https://www.dryrun.security/) | 🟠 commercial | — | — | **3.2** | AI code security review focused on intent and risk |
 | [Escape](https://escape.tech/) | 🟠 commercial | — | — | **3.2** | API security testing with AI-driven discovery and scanning |
-| [HackerOne Hai](https://www.hackerone.com/ai) | 🟠 commercial | — | — | **3.2** | HackerOne AI assistant (Hai) for triage and research workflows |
+| [HackerOne Hai](https://www.hackerone.com/solutions/ai) | 🟠 commercial | — | — | **3.2** | HackerOne AI assistant (Hai) for triage and research workflows |
 | [Hadrian](https://hadrian.io/) | 🟠 commercial | — | — | **3.2** | Autonomous external attack-surface management and testing |
 | [ProjectDiscovery Neo](https://projectdiscovery.io/blog/neo-v1) | 🟠 commercial | — | — | **3.2** | Nuclei makers' autonomous platform: parallel agents pentest apps/APIs, red-team, re-prove fixes |
-| [Snyk DeepCode AI](https://snyk.io/) | 🟠 commercial | — | — | **3.2** | AI-assisted code security and fix suggestions |
+| [Snyk DeepCode AI](https://snyk.io/platform/deepcode-ai/) | 🟠 commercial | — | — | **3.2** | Snyk's DeepCode AI: hybrid symbolic+LLM SAST engine with AI autofix |
 | [Strix Cloud](https://strix.ai/) | 🟠 commercial | — | — | **3.2** | Commercial offering around the open-source Strix AI hackers |
 | [ZeroPath](https://zeropath.com/) | 🟠 commercial | — | — | **3.2** | AI-powered application security / SAST-style code hunting |
 
@@ -171,6 +173,7 @@ Agent skills, harnesses, and scaffolding that turn coding agents into security o
 | [AgentHound](https://github.com/adithyan-ak/AgentHound) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/adithyan-ak/AgentHound?style=flat-square)<br>453 | 2026-10-25 | **3.1** | Offensive framework for agentic infra: MCP/A2A recon & looting |
 | [Transilience Community Tools](https://github.com/transilienceai/communitytools) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/transilienceai/communitytools?style=flat-square)<br>595 | 2026-07-29 | **2.9** | Claude Code skills/agents/slash commands for pentest & bounty |
 | [Forefy .context](https://github.com/forefy/.context) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/forefy/.context?style=flat-square)<br>153 | 2026-10-26 | **2.9** | Skills, Goals, Dynamic Workflows for security auditing |
+| [Anamnesis (LLM exploit generation)](https://github.com/SeanHeelan/anamnesis-release) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/SeanHeelan/anamnesis-release?style=flat-square)<br>635 | 2026-01-30 | **2.7** | Sean Heelan's agents that wrote 40+ working exploits for a QuickJS 0-day under modern mitigations; code, raw runs and write-up |
 | [claude-code-security-review](https://github.com/anthropics/claude-code-security-review) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/anthropics/claude-code-security-review?style=flat-square)<br>6.6k | 2026-02-11 | **2.5** | Official Claude semantic SAST GitHub Action for PR diffs |
 | [Bug-Bounty-Agents](https://github.com/matty69v/Bug-Bounty-Agents) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/matty69v/Bug-Bounty-Agents?style=flat-square)<br>453 | 2026-04-30 | **2.4** | 43 AI agent personas across the bug-bounty lifecycle |
 | [cyber-security-llm-agents](https://github.com/NVISOsecurity/cyber-security-llm-agents) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/NVISOsecurity/cyber-security-llm-agents?style=flat-square)<br>397 | 2024-05-07 | **1.7** | NVISO AutoGen agents for cybersecurity (RSAC 2024) |
@@ -245,8 +248,8 @@ LLM assistants and MCP bridges for IDA, Ghidra, Binary Ninja, JADX, and friends.
 
 | Name | Type | Stars | Last push | Rating | Description |
 |------|:----:|------:|:---------:|:------:|-------------|
-| [IDA Pro MCP](https://github.com/mrexodia/ida-pro-mcp) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/mrexodia/ida-pro-mcp?style=flat-square)<br>13.2k | 2026-09-26 | **4.4** | MCP bridge for IDA Pro → LLM decompile/xref/debug workflows |
 | [GhidraMCP](https://github.com/LaurieWired/GhidraMCP) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/LaurieWired/GhidraMCP?style=flat-square)<br>11.6k | 2026-10-10 | **4.3** | MCP server exposing Ghidra RE ops to any MCP-capable LLM |
+| [IDA Pro MCP](https://github.com/mrexodia/ida-pro-mcp) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/mrexodia/ida-pro-mcp?style=flat-square)<br>13.2k | 2026-09-26 | **4.1** | MCP bridge for IDA Pro → LLM decompile/xref/debug workflows |
 | [ghidra-mcp](https://github.com/bethington/ghidra-mcp) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/bethington/ghidra-mcp?style=flat-square)<br>5.9k | 2026-10-26 | **3.6** | Ghidra MCP with 200+ tools; GUI plugin or headless |
 | [ReVa](https://github.com/cyberkaida/reverse-engineering-assistant) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/cyberkaida/reverse-engineering-assistant?style=flat-square)<br>882 | 2026-10-26 | **3.3** | Ghidra-focused RE assistant with MCP + Claude Skills |
 | [Gepetto](https://github.com/JusticeRage/Gepetto) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/JusticeRage/Gepetto?style=flat-square)<br>3.5k | 2026-08-15 | **3.2** | IDA Pro plugin: GPT comments and variable renaming |
@@ -267,12 +270,14 @@ Agents that autonomously solve CTF challenges and interactive exploit tasks.
 | Name | Type | Stars | Last push | Rating | Description |
 |------|:----:|------:|:---------:|:------:|-------------|
 | [SWE-agent (EnIGMA)](https://github.com/SWE-agent/SWE-agent) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/SWE-agent/SWE-agent?style=flat-square)<br>20.6k | 2026-10-19 | **4.8** | SWE-agent with EnIGMA CTF mode (ICML'25): interactive tools for debugger/netcat-style CTF solving |
+| [ctf-skills](https://github.com/ljagiello/ctf-skills) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/ljagiello/ctf-skills?style=flat-square)<br>3.5k | 2026-10-27 | **3.5** | Agent Skills pack for CTFs: /solve-challenge triage router + web, pwn, crypto, rev, forensics, OSINT, AI/ML skills; works with Claude Code |
 | [Project Muteki](https://github.com/FishCodeTech/muteki) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/FishCodeTech/muteki?style=flat-square)<br>617 | 2026-10-26 | **3.2** | Multi-agent CTF-solving swarm with CLI agent engines |
 | [D-CIPHER (NYU CTF Agents)](https://github.com/NYU-LLM-CTF/nyuctf_agents) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/NYU-LLM-CTF/nyuctf_agents?style=flat-square)<br>174 | 2026-07-17 | **3.1** | NYU planner/executor/auto-prompter multi-agent CTF solver; SOTA on NYU CTF Bench, Cybench, HTB |
 | [BoxPwnr](https://github.com/0ca/BoxPwnr) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/0ca/BoxPwnr?style=flat-square)<br>467 | 2026-07-24 | **2.4** | Benchmark LLMs on HTB, PortSwigger, picoCTF, TryHackMe… |
 | [ChatGPT on CTF](https://github.com/LiuYuancheng/ChatGPT_on_CTF) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/LiuYuancheng/ChatGPT_on_CTF?style=flat-square)<br>53 | 2026-08-18 | **2.4** | Research: can LLMs solve CTFs by running commands? |
 | [Veria Labs CTF Agent](https://github.com/verialabs/ctf-agent) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/verialabs/ctf-agent?style=flat-square)<br>889 | 2026-03-29 | **2.2** | Coordinator LLM races model swarms; BSidesSF 2026 winner |
 | [Palisade ReAct&Plan (Hacking CTFs with Plain Agents)](https://github.com/PalisadeResearch/intercode) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/PalisadeResearch/intercode?style=flat-square)<br>71 | 2024-12-05 | **2.0** | Simple ReAct&Plan agent that saturated InterCode-CTF (95%) with plain prompting + Kali tools |
+| [CRAKEN (NYU CTF Agents)](https://github.com/NYU-LLM-CTF/nyuctf_agents_craken) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/NYU-LLM-CTF/nyuctf_agents_craken?style=flat-square)<br>45 | 2025-07-13 | **1.9** | Knowledge-based planner/executor CTF agent with Self-RAG + Graph-RAG over CTF write-ups; #1 on NYU CTF Bench leaderboard (44/200) |
 
 ## Bug Bounty & Recon
 
@@ -281,12 +286,15 @@ AI-assisted recon, scanning, reporting, and bounty workflows.
 | Name | Type | Stars | Last push | Rating | Description |
 |------|:----:|------:|:---------:|:------:|-------------|
 | [Nuclei](https://github.com/projectdiscovery/nuclei) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/projectdiscovery/nuclei?style=flat-square)<br>32.3k | 2026-10-26 | **3.9** | Fast vuln scanner; AI template generation via -ai flag |
+| [Osmedeus](https://github.com/j3ssie/osmedeus) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/j3ssie/osmedeus?style=flat-square)<br>6.6k | 2026-10-04 | **3.6** | Veteran recon/attack-surface workflow engine, now with agentic LLM steps (tool-calling sub-agents) and Claude Code/Codex ACP agents |
 | [PwnDoc](https://github.com/pwndoc/pwndoc) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/pwndoc/pwndoc?style=flat-square)<br>2.9k | 2026-10-26 | **3.5** | Pentest report generator with AI-assisted finding generation |
 | [SysReptor](https://github.com/Syslifters/sysreptor) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/Syslifters/sysreptor?style=flat-square)<br>2.6k | 2026-10-25 | **3.5** | Pentest reporting platform with AI agent drafting findings |
 | [OpenOSINT](https://github.com/OpenOSINT/OpenOSINT) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/OpenOSINT/OpenOSINT?style=flat-square)<br>1.8k | 2026-10-22 | **3.4** | AI OSINT agent (REPL, MCP, CLI, web) with 20 tools |
+| [Custom AI Agent (burp-ai-agent)](https://github.com/six2dez/burp-ai-agent) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/six2dez/burp-ai-agent?style=flat-square)<br>1.6k | 2026-10-21 | **3.4** | six2dez's Burp extension (BApp Store): local/cloud LLMs, AI passive+active scanner, up to 59 MCP tools so external agents can drive Burp |
 | [VoidAccess](https://github.com/KatrielMoses/voidaccess) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/KatrielMoses/voidaccess?style=flat-square)<br>936 | 2026-10-21 | **3.3** | Dark-web OSINT: Tor fan-out + LLM entity graph + IOC export |
 | [OSINTGPT](https://github.com/estebanpdl/osintgpt) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/estebanpdl/osintgpt?style=flat-square)<br>532 | 2026-10-25 | **3.2** | OSINT analysis with GPT embeddings + vector search |
 | [HackBot](https://github.com/morpheuslord/HackBot) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/morpheuslord/HackBot?style=flat-square)<br>365 | 2026-09-19 | **2.8** | LLaMA-based cybersecurity chatbot for scan/code analysis |
+| [DorkAgent](https://github.com/yee-yore/DorkAgent) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/yee-yore/DorkAgent?style=flat-square)<br>330 | 2026-08-24 | **2.8** | LLM agents that generate, run and triage Google dorks (Serper/SerpApi) for bug-bounty recon |
 | [BruteForceAI](https://github.com/MorDavid/BruteForceAI) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/MorDavid/BruteForceAI?style=flat-square)<br>1.9k | 2026-07-17 | **2.7** | LLM-powered brute-force combining AI reasoning with login attacks |
 | [pentest-agents](https://github.com/H-mmer/pentest-agents) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/H-mmer/pentest-agents?style=flat-square)<br>1k | 2026-06-12 | **2.6** | Bug-bounty agent suite (~50 agents, 2 MCP servers) for Claude Code/Codex/Gemini/Cursor with hunt loops |
 | [ReconAIzer](https://github.com/hisxo/ReconAIzer) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/hisxo/ReconAIzer?style=flat-square)<br>905 | 2023-05-03 | **1.9** | Burp extension using GPT to discover endpoints/params during recon |
@@ -331,6 +339,8 @@ Foundational and recent papers on autonomous hacking, CTF agents, and CRS.
 | [ATLANTIS CRS](https://arxiv.org/abs/2509.14589) | 🔵 paper / writing | — | — | **3.0** | ATLANTIS: AI-driven Threat Localization, Analysis, and Triage |
 | [AutoAttacker](https://arxiv.org/abs/2403.02691) | 🔵 paper / writing | — | — | **3.0** | A Large Language Model Guided System to Automate Attacks |
 | [ChatAFL (NDSS'24)](https://arxiv.org/abs/2306.12445) | 🔵 paper / writing | — | — | **3.0** | Large Language Model guided Protocol Fuzzing |
+| [CTF-ABACUS: How Do LLM Agents Actually Get the Flag?](https://arxiv.org/abs/2608.26237) | 🔵 paper / writing | — | — | **3.0** | Trace-level audit of 1,435 agent CTF runs on 240 challenges: only 62-87% of recovered flags come from verified exploitation |
+| [CyberArena](https://arxiv.org/abs/2610.19005) | 🔵 paper / writing | — | — | **3.0** | Live symmetric attack-and-defense benchmark: two agents attack and patch concurrently over changing services (12 frontier agents, 40 challenges, 466 matches) |
 | [HackingBuddyGPT / Getting pwn'd by AI](https://arxiv.org/abs/2308.00121) | 🔵 paper / writing | — | — | **3.0** | LLM agents for privilege escalation (FSE'23 industrial) |
 | [HackSynth](https://arxiv.org/abs/2412.01777) | 🔵 paper / writing | — | — | **3.0** | LLM agent framework for autonomous pentesting + benchmarks |
 | [NYU CTF Bench](https://arxiv.org/abs/2406.05590) | 🔵 paper / writing | — | — | **3.0** | A Scalable LLM-driven CTF Benchmark for Cybersecurity |
@@ -350,6 +360,7 @@ Essays, vendor write-ups, and research blogs that define the space.
 | [All About Hackbots (Joseph Thacker)](https://josephthacker.com/ai/2024/02/21/hackbots.html) | 🔵 paper / writing | — | — | **4.0** | Defines 'hackbot'; Hero PoC; foundational essay |
 | [DARPA AIxCC Results](https://www.darpa.mil/news/2025/aixcc-results) | 🔵 paper / writing | — | — | **4.0** | Official DARPA AIxCC Final results announcement |
 | [The Bug Bounty Singularity (Joseph Thacker)](https://josephthacker.com/hacking/2026/07/01/we-built-a-hackbot.html) | 🔵 paper / writing | — | — | **4.0** | Building a hackbot that found 126 bugs in 5 months |
+| [On the Coming Industrialisation of Exploit Generation with LLMs (Sean Heelan)](https://sean.heelan.io/2026/01/18/on-the-coming-industrialisation-of-exploit-generation-with-llms/) | 🔵 paper / writing | — | — | **3.8** | Argues offensive capability will be bounded by token throughput, not headcount; based on agents exploiting a QuickJS 0-day |
 | [AIxCC Final and Team Atlanta](https://team-atlanta.github.io/blog/post-afc/) | 🔵 paper / writing | — | — | **3.0** | Winning Atlantis CRS technical retrospective |
 | [Build your own vulnerability harness (Cloudflare)](https://blog.cloudflare.com/build-your-own-vulnerability-harness/) | 🔵 paper / writing | — | — | **3.0** | Cloudflare on agentic vuln harnesses and their audit skill |
 | [Buttercup wins 2nd at AIxCC (Trail of Bits)](https://blog.trailofbits.com/2025/08/09/trail-of-bits-buttercup-wins-2nd-place-in-aixcc-challenge/) | 🔵 paper / writing | — | — | **3.0** | ToB Buttercup AIxCC write-up |
@@ -362,13 +373,16 @@ AI-for-offense competitions and challenge series.
 
 | Name | Type | Stars | Last push | Rating | Description |
 |------|:----:|------:|:---------:|:------:|-------------|
-| [DARPA AI Cyber Challenge (AIxCC)](https://aicyberchallenge.com/) | 🟠 commercial | — | — | **4.7** | Two-year DARPA+ARPA-H competition for autonomous CRS |
-| [AgentCTF × AgentXploit (Berkeley RDI)](https://ctf.secure-agent.com/) | 🟠 commercial | — | — | **3.7** | Berkeley RDI competition: build A2A exploit agents vs real CVEs in 20+ AI/web frameworks |
-| [Neurogrid CTF (Hack The Box)](https://ctf.hackthebox.com/event/details/neurogrid-ctf-the-ultimate-ai-security-showdown-2712) | 🟠 commercial | — | — | **3.7** | HTB AI-first, MCP-only CTF (Nov 2025) benchmarking AI security agents; 156 AI teams vs humans |
+| [DARPA AI Cyber Challenge (AIxCC)](https://aicyberchallenge.com/) | 🟣 event / community | — | — | **4.7** | Two-year DARPA+ARPA-H competition for autonomous CRS |
+| [AgentCTF × AgentXploit (Berkeley RDI)](https://ctf.secure-agent.com/) | 🟣 event / community | — | — | **3.7** | Berkeley RDI AgentCTF: A2A exploit agents vs 20 real CVEs; 2026 winner CyberForge (4.35/5) used a 220-line single-prompt GPT-5.4 agent |
+| [HalCTF (DEF CON 34 AI Village)](https://aivillage.org/blog/halctf/) | 🟣 event / community | — | — | **3.7** | First autonomous-only CTF at DEF CON (Aug 2026): teams upload Docker agent containers, no human control mid-run, small local models score more |
+| [Neurogrid CTF (Hack The Box)](https://ctf.hackthebox.com/event/details/neurogrid-ctf-the-ultimate-ai-security-showdown-2712) | 🟣 event / community | — | — | **3.7** | HTB AI-first, MCP-only CTF (Nov 2025) benchmarking AI security agents; 156 AI teams vs humans |
+| [Tencent Cloud Hackathon: Intelligent Penetration Challenge](https://cloud.tencent.com/developer/article/2661083) | 🟣 event / community | — | — | **3.7** | Tencent Cloud's AI-agent pentest contest (2nd ed., 2026): 610 teams' agents attacked isolated cloud ranges; won by NSFOCUS 'ai小分队' (manager + multi-solver harness) |
 | [AI vs Humans CTF (Palisade × Hack The Box)](https://github.com/PalisadeResearch/ai-vs-humans-ctf-report) | 🟢 open-source | ![stars](https://img.shields.io/github/stars/PalisadeResearch/ai-vs-humans-ctf-report?style=flat-square)<br>7 | 2026-10-01 | **3.4** | First public AI-agent vs human CTF (Mar 2025, 403 teams); full data, agent designs and standings |
-| [CSAW](https://www.csaw.io/) | 🟠 commercial | — | — | **3.2** | NYU student cybersecurity games and conference; parent of the separate LLM CTF Attack Competition |
-| [CSAW LLM CTF Attack Competition](https://csaw.io/competition/llm-ctf-attack-competition) | 🟠 commercial | — | — | **3.2** | CSAW competition: generative AI solving CTF challenges |
-| [DEF CON AI Village](https://aivillage.org/) | 🟠 commercial | — | — | **3.2** | DEF CON village for AI security research, talks, and challenges |
+| [Agentic CTF (DefCamp 2026)](https://def.camp/competitions/agentic-ctf/) | 🟣 event / community | — | — | **3.2** | DefCamp (Bucharest) harness-vs-harness CTF: submitted agents/swarms solve sealed challenges offline, no internet, no mid-run steering, organiser-paid tokens |
+| [CSAW Agentic Automated CTF](https://csaw.io/competition/agentic-automated-ctf) | 🟣 event / community | — | — | **3.2** | CSAW track where teams build fully autonomous LLM agents to solve CTFs (2025 used NYU CTF Lite, 50 challenges); logs + write-up required |
+| [CSAW LLM CTF Attack Competition](https://csaw.io/competition/llm-ctf-attack-competition) | 🟣 event / community | — | — | **3.2** | NYU-run CSAW contest: agents (autonomous or human-in-the-loop) solve past CTF challenges; 2026 runs US-Canada + MENA, finals 7-14 Nov 2026 |
+| [DEF CON AI Village](https://aivillage.org/) | 🟣 event / community | — | — | **3.2** | DEF CON village for AI security research, talks, and challenges |
 
 ## People & Communities
 
@@ -379,9 +393,11 @@ Researchers, labs, and orgs shaping the hackbot ecosystem.
 | [Brendan Dolan-Gavitt (@moyix)](https://xbow.com/authors/brendan-dolan-gavitt) | 🔵 paper / writing | — | — | **4.5** | XBOW AI researcher, ex-NYU prof; co-author of NYU CTF Bench and D-CIPHER, LLM-for-security pioneer |
 | [Project Zero / Big Sleep](https://projectzero.google/) | 🔵 paper / writing | — | — | **4.5** | Google P0 + DeepMind offensive LLM research program |
 | [Joseph Thacker (@rezz0)](https://josephthacker.com/) | 🔵 paper / writing | — | — | **4.0** | Coined popular 'hackbots' framing; HackerOne AI lead / researcher |
+| [Sean Heelan](https://sean.heelan.io/) | 🔵 paper / writing | — | — | **3.8** | Exploitation researcher; used o3 to find Linux kernel ksmbd 0-day CVE-2025-37899; built Anamnesis LLM exploit-generation agents |
 | [Alias Robotics (CAI)](https://aliasrobotics.com/) | 🟠 commercial | — | — | **3.2** | Creators of CAI Cybersecurity AI framework |
+| [Dreadnode](https://dreadnode.io/) | 🟠 commercial | — | — | **3.2** | Offensive-AI research company: agent platform for cyber ops, DreadIndex model rankings on offensive-security evals, AIRTBench |
+| [hackingBuddy.ai](https://hackingbuddy.ai/) | 🟣 event / community | — | — | **3.2** | Academic community/site around hackingBuddyGPT priv-esc research |
 | [Trail of Bits](https://www.trailofbits.com/) | 🟠 commercial | — | — | **3.2** | Buttercup CRS; MCP security; offensive AI research shop |
-| [hackingBuddy.ai](https://hackingbuddy.ai/) | 🔵 paper / writing | — | — | **3.0** | Academic community/site around hackingBuddyGPT priv-esc research |
 | [Palisade Research](https://palisaderesearch.org/) | 🔵 paper / writing | — | — | **3.0** | AI-risk lab running AI-vs-human CTF tracks and offensive-capability elicitation studies |
 
 ## Related Awesome Lists
@@ -424,4 +440,4 @@ This list is for **authorized** security testing, research, and education only. 
 
 ---
 
-<sub>Maintained by [Rafał Gacek (BerSec)](https://github.com/BerSecHub) · Polish pentester (OSCP / BSCP / AIRTP+) · Stats generated 2026-10-27 UTC · 215 entries</sub>
+<sub>Maintained by [Rafał Gacek (BerSec)](https://github.com/BerSecHub) · Polish pentester (OSCP / BSCP / AIRTP+) · Stats generated 2026-10-28 UTC · 229 entries</sub>

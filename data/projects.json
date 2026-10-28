@@ -1,13 +1,14 @@
 {
   "meta": {
-    "generated_at": "2026-10-27T06:27:58.890281+00:00",
+    "generated_at": "2026-10-28T06:19:36.117737+00:00",
     "timezone_note": "Europe/Warsaw (UTC+1)",
-    "entry_count": 215,
+    "entry_count": 229,
     "rating_rubric": {
       "scale": "1.0\u20135.0",
       "open_source": "0.5 base + star_component(\u22642.0 using log10 of min(stars,50000); stars above 100000 score 0 and display as n/a) + maintenance(\u22641.5) + prestige boost(\u22641.5); archived capped at 2.5",
       "maintenance": "\u226430d=1.5, \u226490d=1.2, \u2264180d=0.8, \u2264365d=0.4, older=0.1; archived=0",
       "commercial": "base 3.2 + prestige boost",
+      "event": "base 3.2 + prestige boost (competitions and community events; same formula as commercial)",
       "paper": "base 3.0 + prestige boost",
       "prestige_examples": "AIxCC placements, USENIX/ICML/NDSS, Project Zero, XBOW, major benchmarks"
     },
@@ -98,7 +99,7 @@
       "name": "DARPA AI Cyber Challenge (AIxCC)",
       "url": "https://aicyberchallenge.com/",
       "category": "Competitions",
-      "type": "commercial",
+      "type": "event",
       "stars": null,
       "last_commit": null,
       "archived": false,
@@ -194,17 +195,6 @@
       "note": "XBOW write-ups: HackerOne #1 run, exploit case studies, benchmark methodology"
     },
     {
-      "name": "IDA Pro MCP",
-      "url": "https://github.com/mrexodia/ida-pro-mcp",
-      "category": "Reverse Engineering Agents",
-      "type": "open-source",
-      "stars": 13165,
-      "last_commit": "2026-09-26T15:42:10Z",
-      "archived": false,
-      "rating": 4.4,
-      "note": "MCP bridge for IDA Pro \u2192 LLM decompile/xref/debug workflows"
-    },
-    {
       "name": "Mantis",
       "url": "https://github.com/google/mantis",
       "category": "Frameworks, Skills & Harnesses",
@@ -269,6 +259,17 @@
       "archived": false,
       "rating": 4.2,
       "note": "PentestGPT: An LLM-empowered Automatic Penetration Testing Tool"
+    },
+    {
+      "name": "IDA Pro MCP",
+      "url": "https://github.com/mrexodia/ida-pro-mcp",
+      "category": "Reverse Engineering Agents",
+      "type": "open-source",
+      "stars": 13165,
+      "last_commit": "2026-09-26T15:42:10Z",
+      "archived": false,
+      "rating": 4.1,
+      "note": "MCP bridge for IDA Pro \u2192 LLM decompile/xref/debug workflows"
     },
     {
       "name": "hackingBuddyGPT",
@@ -458,6 +459,17 @@
       "note": "Detect-Exploit-Patch evaluation on real bug bounties"
     },
     {
+      "name": "On the Coming Industrialisation of Exploit Generation with LLMs (Sean Heelan)",
+      "url": "https://sean.heelan.io/2026/01/18/on-the-coming-industrialisation-of-exploit-generation-with-llms/",
+      "category": "Talks, Blogs & Writing",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.8,
+      "note": "Argues offensive capability will be bounded by token throughput, not headcount; based on agents exploiting a QuickJS 0-day"
+    },
+    {
       "name": "Pentera",
       "url": "https://www.pentera.io/",
       "category": "Commercial Hackbots",
@@ -467,6 +479,17 @@
       "archived": false,
       "rating": 3.8,
       "note": "Automated security validation / continuous automated red teaming platform"
+    },
+    {
+      "name": "Sean Heelan",
+      "url": "https://sean.heelan.io/",
+      "category": "People & Communities",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.8,
+      "note": "Exploitation researcher; used o3 to find Linux kernel ksmbd 0-day CVE-2025-37899; built Anamnesis LLM exploit-generation agents"
     },
     {
       "name": "Cloudflare Security Audit Skill",
@@ -538,23 +561,56 @@
       "name": "AgentCTF \u00d7 AgentXploit (Berkeley RDI)",
       "url": "https://ctf.secure-agent.com/",
       "category": "Competitions",
-      "type": "commercial",
+      "type": "event",
       "stars": null,
       "last_commit": null,
       "archived": false,
       "rating": 3.7,
-      "note": "Berkeley RDI competition: build A2A exploit agents vs real CVEs in 20+ AI/web frameworks"
+      "note": "Berkeley RDI AgentCTF: A2A exploit agents vs 20 real CVEs; 2026 winner CyberForge (4.35/5) used a 220-line single-prompt GPT-5.4 agent"
+    },
+    {
+      "name": "HalCTF (DEF CON 34 AI Village)",
+      "url": "https://aivillage.org/blog/halctf/",
+      "category": "Competitions",
+      "type": "event",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.7,
+      "note": "First autonomous-only CTF at DEF CON (Aug 2026): teams upload Docker agent containers, no human control mid-run, small local models score more"
     },
     {
       "name": "Neurogrid CTF (Hack The Box)",
       "url": "https://ctf.hackthebox.com/event/details/neurogrid-ctf-the-ultimate-ai-security-showdown-2712",
       "category": "Competitions",
-      "type": "commercial",
+      "type": "event",
       "stars": null,
       "last_commit": null,
       "archived": false,
       "rating": 3.7,
       "note": "HTB AI-first, MCP-only CTF (Nov 2025) benchmarking AI security agents; 156 AI teams vs humans"
+    },
+    {
+      "name": "Tencent Cloud Hackathon: Intelligent Penetration Challenge",
+      "url": "https://cloud.tencent.com/developer/article/2661083",
+      "category": "Competitions",
+      "type": "event",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.7,
+      "note": "Tencent Cloud's AI-agent pentest contest (2nd ed., 2026): 610 teams' agents attacked isolated cloud ranges; won by NSFOCUS 'ai\u5c0f\u5206\u961f' (manager + multi-solver harness)"
+    },
+    {
+      "name": "Osmedeus",
+      "url": "https://github.com/j3ssie/osmedeus",
+      "category": "Bug Bounty & Recon",
+      "type": "open-source",
+      "stars": 6626,
+      "last_commit": "2026-10-04T17:27:24Z",
+      "archived": false,
+      "rating": 3.6,
+      "note": "Veteran recon/attack-surface workflow engine, now with agentic LLM steps (tool-calling sub-agents) and Claude Code/Codex ACP agents"
     },
     {
       "name": "Decepticon",
@@ -610,6 +666,17 @@
       "archived": false,
       "rating": 3.6,
       "note": "Team Atlanta AIxCC Final winner CRS ($4M)"
+    },
+    {
+      "name": "ctf-skills",
+      "url": "https://github.com/ljagiello/ctf-skills",
+      "category": "CTF Solvers & Agents",
+      "type": "open-source",
+      "stars": 3550,
+      "last_commit": "2026-10-27T00:32:41Z",
+      "archived": false,
+      "rating": 3.5,
+      "note": "Agent Skills pack for CTFs: /solve-challenge triage router + web, pwn, crypto, rev, forensics, OSINT, AI/ML skills; works with Claude Code"
     },
     {
       "name": "RedAmon",
@@ -764,6 +831,17 @@
       "archived": false,
       "rating": 3.4,
       "note": "Broad AI security tools with caveats and star tracking"
+    },
+    {
+      "name": "Custom AI Agent (burp-ai-agent)",
+      "url": "https://github.com/six2dez/burp-ai-agent",
+      "category": "Bug Bounty & Recon",
+      "type": "open-source",
+      "stars": 1557,
+      "last_commit": "2026-10-21T18:53:38Z",
+      "archived": false,
+      "rating": 3.4,
+      "note": "six2dez's Burp extension (BApp Store): local/cloud LLMs, AI passive+active scanner, up to 59 MCP tools so external agents can drive Burp"
     },
     {
       "name": "AI vs Humans CTF (Palisade \u00d7 Hack The Box)",
@@ -1118,6 +1196,17 @@
       "note": "Connects AI to 400+ tools via MCP in Exegol container"
     },
     {
+      "name": "Agentic CTF (DefCamp 2026)",
+      "url": "https://def.camp/competitions/agentic-ctf/",
+      "category": "Competitions",
+      "type": "event",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.2,
+      "note": "DefCamp (Bucharest) harness-vs-harness CTF: submitted agents/swarms solve sealed challenges offline, no internet, no mid-run steering, organiser-paid tokens"
+    },
+    {
       "name": "Alias Robotics (CAI)",
       "url": "https://aliasrobotics.com/",
       "category": "People & Communities",
@@ -1162,11 +1251,11 @@
       "note": "Enterprise AppSec with AI-assisted SAST/DAST"
     },
     {
-      "name": "CSAW",
-      "url": "https://www.csaw.io/",
+      "name": "CSAW Agentic Automated CTF",
+      "url": "https://csaw.io/competition/agentic-automated-ctf",
       "category": "Competitions",
-      "type": "commercial",
-      "note": "NYU student cybersecurity games and conference; parent of the separate LLM CTF Attack Competition",
+      "type": "event",
+      "note": "CSAW track where teams build fully autonomous LLM agents to solve CTFs (2025 used NYU CTF Lite, 50 challenges); logs + write-up required",
       "stars": null,
       "last_commit": null,
       "archived": false,
@@ -1176,23 +1265,34 @@
       "name": "CSAW LLM CTF Attack Competition",
       "url": "https://csaw.io/competition/llm-ctf-attack-competition",
       "category": "Competitions",
-      "type": "commercial",
+      "type": "event",
       "stars": null,
       "last_commit": null,
       "archived": false,
       "rating": 3.2,
-      "note": "CSAW competition: generative AI solving CTF challenges"
+      "note": "NYU-run CSAW contest: agents (autonomous or human-in-the-loop) solve past CTF challenges; 2026 runs US-Canada + MENA, finals 7-14 Nov 2026"
     },
     {
       "name": "DEF CON AI Village",
       "url": "https://aivillage.org/",
       "category": "Competitions",
-      "type": "commercial",
+      "type": "event",
       "note": "DEF CON village for AI security research, talks, and challenges",
       "stars": null,
       "last_commit": null,
       "archived": false,
       "rating": 3.2
+    },
+    {
+      "name": "Dreadnode",
+      "url": "https://dreadnode.io/",
+      "category": "People & Communities",
+      "type": "commercial",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.2,
+      "note": "Offensive-AI research company: agent platform for cyber ops, DreadIndex model rankings on offensive-security evals, AIRTBench"
     },
     {
       "name": "DryRun Security",
@@ -1218,7 +1318,7 @@
     },
     {
       "name": "HackerOne Hai",
-      "url": "https://www.hackerone.com/ai",
+      "url": "https://www.hackerone.com/solutions/ai",
       "category": "Commercial Hackbots",
       "type": "commercial",
       "stars": null,
@@ -1226,6 +1326,17 @@
       "archived": false,
       "rating": 3.2,
       "note": "HackerOne AI assistant (Hai) for triage and research workflows"
+    },
+    {
+      "name": "hackingBuddy.ai",
+      "url": "https://hackingbuddy.ai/",
+      "category": "People & Communities",
+      "type": "event",
+      "note": "Academic community/site around hackingBuddyGPT priv-esc research",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.2
     },
     {
       "name": "Hadrian",
@@ -1251,14 +1362,14 @@
     },
     {
       "name": "Snyk DeepCode AI",
-      "url": "https://snyk.io/",
+      "url": "https://snyk.io/platform/deepcode-ai/",
       "category": "Commercial Hackbots",
       "type": "commercial",
       "stars": null,
       "last_commit": null,
       "archived": false,
       "rating": 3.2,
-      "note": "AI-assisted code security and fix suggestions"
+      "note": "Snyk's DeepCode AI: hybrid symbolic+LLM SAST engine with AI autofix"
     },
     {
       "name": "Strix Cloud",
@@ -1536,6 +1647,28 @@
       "note": "Large Language Model guided Protocol Fuzzing"
     },
     {
+      "name": "CTF-ABACUS: How Do LLM Agents Actually Get the Flag?",
+      "url": "https://arxiv.org/abs/2608.26237",
+      "category": "Research Papers",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.0,
+      "note": "Trace-level audit of 1,435 agent CTF runs on 240 challenges: only 62-87% of recovered flags come from verified exploitation"
+    },
+    {
+      "name": "CyberArena",
+      "url": "https://arxiv.org/abs/2610.19005",
+      "category": "Research Papers",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.0,
+      "note": "Live symmetric attack-and-defense benchmark: two agents attack and patch concurrently over changing services (12 frontier agents, 40 challenges, 466 matches)"
+    },
+    {
       "name": "Getting started with Mantis (Google)",
       "url": "https://cloud.google.com/blog/products/identity-security/getting-started-with-the-mantis-harness-to-find-and-fix-bugs",
       "category": "Talks, Blogs & Writing",
@@ -1545,17 +1678,6 @@
       "archived": false,
       "rating": 3.0,
       "note": "Google Mantis harness for find-and-fix workflows"
-    },
-    {
-      "name": "hackingBuddy.ai",
-      "url": "https://hackingbuddy.ai/",
-      "category": "People & Communities",
-      "type": "paper",
-      "note": "Academic community/site around hackingBuddyGPT priv-esc research",
-      "stars": null,
-      "last_commit": null,
-      "archived": false,
-      "rating": 3.0
     },
     {
       "name": "HackingBuddyGPT / Getting pwn'd by AI",
@@ -1712,6 +1834,17 @@
       "note": "LLaMA-based cybersecurity chatbot for scan/code analysis"
     },
     {
+      "name": "DorkAgent",
+      "url": "https://github.com/yee-yore/DorkAgent",
+      "category": "Bug Bounty & Recon",
+      "type": "open-source",
+      "stars": 330,
+      "last_commit": "2026-08-24T14:43:47Z",
+      "archived": false,
+      "rating": 2.8,
+      "note": "LLM agents that generate, run and triage Google dorks (Serper/SerpApi) for bug-bounty recon"
+    },
+    {
       "name": "awesome-ai-pentesting",
       "url": "https://github.com/skyvanguard/awesome-ai-pentesting",
       "category": "Related Awesome Lists",
@@ -1732,6 +1865,17 @@
       "archived": false,
       "rating": 2.7,
       "note": "LLM-powered brute-force combining AI reasoning with login attacks"
+    },
+    {
+      "name": "Anamnesis (LLM exploit generation)",
+      "url": "https://github.com/SeanHeelan/anamnesis-release",
+      "category": "Frameworks, Skills & Harnesses",
+      "type": "open-source",
+      "stars": 635,
+      "last_commit": "2026-01-30T12:37:54Z",
+      "archived": false,
+      "rating": 2.7,
+      "note": "Sean Heelan's agents that wrote 40+ working exploits for a QuickJS 0-day under modern mitigations; code, raw runs and write-up"
     },
     {
       "name": "llm-sast-scanner",
@@ -2183,6 +2327,17 @@
       "archived": false,
       "rating": 1.9,
       "note": "AI-powered C2 with built-in AI companion for target analysis [URL corrected]"
+    },
+    {
+      "name": "CRAKEN (NYU CTF Agents)",
+      "url": "https://github.com/NYU-LLM-CTF/nyuctf_agents_craken",
+      "category": "CTF Solvers & Agents",
+      "type": "open-source",
+      "stars": 45,
+      "last_commit": "2025-07-13T23:23:15Z",
+      "archived": false,
+      "rating": 1.9,
+      "note": "Knowledge-based planner/executor CTF agent with Self-RAG + Graph-RAG over CTF write-ups; #1 on NYU CTF Bench leaderboard (44/200)"
     },
     {
       "name": "Damn Vulnerable LLM Agent",
