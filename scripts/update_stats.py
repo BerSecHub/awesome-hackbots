@@ -82,6 +82,13 @@ BOOSTS = {
     "cloud.tencent.com/developer/article/2661083": 0.5,
     "sean.heelan.io": 0.8,
     "seanheelan/anamnesis-release": 0.6,
+    # 2026-11-02 verified additions (modest; same 0.4–1.5 rubric).
+    "anthropic.com/research/discovering-vulnerabilities-with-claude": 1.0,
+    "wiz.io/blog/php2shell": 0.8,
+    "hexrayssa/ida-mcp": 0.6,
+    "facebookincubator/zurp": 0.4,
+    "ctfy.tsinghua.edu.cn": 0.5,
+    "dreadnode.io/research/scopebench": 0.5,
 }
 
 # Above this, a star total is not credible adoption for this list (REA: ~393k
