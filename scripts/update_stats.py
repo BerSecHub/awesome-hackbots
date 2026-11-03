@@ -89,6 +89,15 @@ BOOSTS = {
     "facebookincubator/zurp": 0.4,
     "ctfy.tsinghua.edu.cn": 0.5,
     "dreadnode.io/research/scopebench": 0.5,
+    # 2026-11-03 verified additions (modest; same 0.4–1.5 rubric).
+    "garagehq/nightcrawler": 0.4,
+    "tenzai.com": 0.6,
+    "githubsecuritylab/seclab-taskflow-agent": 0.6,
+    "tsecbench.zc.tencent.com": 0.5,
+    "shadu.baidu.com/article/2010": 0.5,
+    "geekcon.top": 0.5,
+    "arcanum-sec.com": 0.6,
+    "cloud.google.com/blog/topics/threat-intelligence/artex-and-friends": 0.8,
 }
 
 # Above this, a star total is not credible adoption for this list (REA: ~393k
