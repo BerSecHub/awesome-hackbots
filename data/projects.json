@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-09T13:42:07.922010+00:00",
+    "generated_at": "2026-11-10T06:15:06.890657+00:00",
     "timezone_note": "Europe/Warsaw (UTC+1)",
-    "entry_count": 252,
+    "entry_count": 263,
     "rating_rubric": {
       "scale": "1.0\u20135.0",
       "open_source": "0.5 base + star_component(\u22642.0 using log10 of min(stars,50000); stars above 100000 score 0 and display as n/a) + maintenance(\u22641.5) + prestige boost(\u22641.5); archived capped at 2.5",
@@ -247,7 +247,7 @@
     },
     {
       "name": "PentestGPT (USENIX'24)",
-      "url": "https://arxiv.org/abs/2308.02167",
+      "url": "https://arxiv.org/abs/2308.06782",
       "category": "Research Papers",
       "type": "paper",
       "stars": null,
@@ -400,6 +400,17 @@
       "note": "Foundational claim that LLM agents can hack websites autonomously"
     },
     {
+      "name": "OpenAI Daybreak (GPT-6 Cyber)",
+      "url": "https://openai.com/index/introducing-gpt-6-cyber",
+      "category": "Commercial Hackbots",
+      "type": "commercial",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 4.0,
+      "note": "OpenAI's cyber model for vetted Daybreak Red customers (5 Nov 2026): 48.5% on ExploitGym, 81 new high-severity Firefox bugs and 948 Linux kernel exploits reported; available via API and Codex"
+    },
+    {
       "name": "SoK: DARPA AIxCC",
       "url": "https://arxiv.org/abs/2602.07666",
       "category": "Research Papers",
@@ -444,6 +455,17 @@
       "note": "MCP server exposing 150+ security tools to AI agents"
     },
     {
+      "name": "RAPTOR",
+      "url": "https://github.com/gadievron/raptor",
+      "category": "Frameworks, Skills & Harnesses",
+      "type": "open-source",
+      "stars": 3993,
+      "last_commit": "2026-11-10T00:09:20Z",
+      "archived": false,
+      "rating": 3.9,
+      "note": "Claude Code-based autonomous offensive/defensive research framework (rules, sub-agents, skills for scanning, fuzzing, exploit and patch generation) by Gadi Evron, Daniel Cuthbert and Thomas Dullien (Halvar Flake)"
+    },
+    {
       "name": "Semgrep",
       "url": "https://github.com/semgrep/semgrep",
       "category": "Code Auditing & SAST Agents",
@@ -478,7 +500,7 @@
     },
     {
       "name": "BountyBench",
-      "url": "https://arxiv.org/abs/2505.14534",
+      "url": "https://arxiv.org/abs/2505.15216",
       "category": "Research Papers",
       "type": "paper",
       "stars": null,
@@ -807,6 +829,17 @@
       "note": "Agent Skills pack for CTFs: /solve-challenge triage router + web, pwn, crypto, rev, forensics, OSINT, AI/ML skills; works with Claude Code"
     },
     {
+      "name": "CyberStrike",
+      "url": "https://github.com/CyberStrikeus/CyberStrike",
+      "category": "Autonomous Pentest Agents",
+      "type": "open-source",
+      "stars": 3492,
+      "last_commit": "2026-11-09T21:49:18Z",
+      "archived": false,
+      "rating": 3.5,
+      "note": "Open-source AI offensive-security harness for automated penetration testing (same org as the Bolt MCP server); catalogued in GitGuardian's Nov 2026 survey"
+    },
+    {
       "name": "RedAmon",
       "url": "https://github.com/samugit83/redamon",
       "category": "Autonomous Pentest Agents",
@@ -926,6 +959,17 @@
       "archived": false,
       "rating": 3.4,
       "note": "AI-assisted pentest scanner with multi-LLM payload generation"
+    },
+    {
+      "name": "Awesome-REA",
+      "url": "https://github.com/reacher-z/Awesome-REA",
+      "category": "Related Awesome Lists",
+      "type": "open-source",
+      "stars": 2363,
+      "last_commit": "2026-11-10T06:05:09Z",
+      "archived": false,
+      "rating": 3.4,
+      "note": "Large source-reviewed catalogue for agent-assisted reverse engineering (\"Reverse Engineer Anything\"): tools, MCP servers, cases and 440+ papers across web, games, apps, binaries, firmware and protocols"
     },
     {
       "name": "OpenOSINT",
@@ -1159,6 +1203,17 @@
       "note": "Bug-bounty/offsec automation framework: native Go utilities, 200+ modular offensive playbooks, token-optimized pipelines and a Go MCP server for Claude, Cursor, Gemini & co."
     },
     {
+      "name": "Eleven",
+      "url": "https://github.com/Zfinix/eleven",
+      "category": "Reverse Engineering Agents",
+      "type": "open-source",
+      "stars": 980,
+      "last_commit": "2026-10-31T04:16:12Z",
+      "archived": false,
+      "rating": 3.3,
+      "note": "Agent-first RE desktop app: any ACP agent (Claude, Codex, Gemini, Cursor\u2026) reads, renames and proposes patches on Mach-O/ELF/PE, APKs and GPU kernels via Ghidra (through REA), Rizin and jadx; every agent edit is logged and undoable"
+    },
+    {
       "name": "0 (0security)",
       "url": "https://github.com/0sec-labs/0",
       "category": "Code Auditing & SAST Agents",
@@ -1223,17 +1278,6 @@
       "archived": false,
       "rating": 3.2,
       "note": "MCP for JADX-AI Android APK reverse engineering"
-    },
-    {
-      "name": "GhidrAssistMCP",
-      "url": "https://github.com/symgraph/GhidrAssistMCP",
-      "category": "Reverse Engineering Agents",
-      "type": "open-source",
-      "stars": 808,
-      "last_commit": "2026-10-09T18:32:10Z",
-      "archived": false,
-      "rating": 3.2,
-      "note": "Native Ghidra MCP extension with security-sensitive tool gating"
     },
     {
       "name": "EvoMaster",
@@ -1344,6 +1388,17 @@
       "archived": false,
       "rating": 3.2,
       "note": "Connects AI to 400+ tools via MCP in Exegol container"
+    },
+    {
+      "name": "Incalmo",
+      "url": "https://github.com/cylabcyberautonomy/Incalmo",
+      "category": "Autonomous Pentest Agents",
+      "type": "open-source",
+      "stars": 149,
+      "last_commit": "2026-11-02T23:41:00Z",
+      "archived": false,
+      "rating": 3.2,
+      "note": "CMU CyLab research system for autonomous LLM red-teaming of multi-host networks via a high-level attack abstraction layer (arXiv 2501.16466)"
     },
     {
       "name": "Burp Suite MCP Server",
@@ -1665,6 +1720,17 @@
       "note": "Multi-agent authorized web app security testing platform"
     },
     {
+      "name": "Pensar Apex",
+      "url": "https://github.com/pensarai/apex",
+      "category": "Autonomous Pentest Agents",
+      "type": "open-source",
+      "stars": 324,
+      "last_commit": "2026-11-10T03:16:27Z",
+      "archived": false,
+      "rating": 3.1,
+      "note": "Pensar's TypeScript terminal agent for blackbox/whitebox pentests: swarm mode, /operator mode for manual exploit chaining, persistent memory, headless CLI for CI/CD (Apache-2.0)"
+    },
+    {
       "name": "LazyOwn",
       "url": "https://github.com/grisuno/LazyOwn",
       "category": "Autonomous Pentest Agents",
@@ -1707,6 +1773,17 @@
       "archived": false,
       "rating": 3.0,
       "note": "Dual-graph (causal + attack) plan-execute-reflect pentest agent"
+    },
+    {
+      "name": "PentesterFlow",
+      "url": "https://github.com/PentesterFlow/agent",
+      "category": "Autonomous Pentest Agents",
+      "type": "open-source",
+      "stars": 1448,
+      "last_commit": "2026-08-31T12:44:05Z",
+      "archived": false,
+      "rating": 3.0,
+      "note": "Human-in-the-loop agentic CLI for pentesters and bug hunters: recon to reporting with engagement memory, Burp integration and local models (Ollama)"
     },
     {
       "name": "AutoCVE",
@@ -1809,7 +1886,7 @@
     },
     {
       "name": "AutoAttacker",
-      "url": "https://arxiv.org/abs/2403.02691",
+      "url": "https://arxiv.org/abs/2403.01038",
       "category": "Research Papers",
       "type": "paper",
       "stars": null,
@@ -1817,6 +1894,17 @@
       "archived": false,
       "rating": 3.0,
       "note": "A Large Language Model Guided System to Automate Attacks"
+    },
+    {
+      "name": "Beyond ARTEX: 45 AI Pentesting Tools (GitGuardian)",
+      "url": "https://blog.gitguardian.com/ai-pentesting-tools-beyond-artex/",
+      "category": "Talks, Blogs & Writing",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.0,
+      "note": "GitGuardian (Nov 2026) catalogues ~45 open-source attack agents into five families, checks which ones ship secret hunting, and counts exposed operator consoles on Shodan (ARTEX family: 1,428 services)"
     },
     {
       "name": "Build your own vulnerability harness (Cloudflare)",
@@ -1853,7 +1941,7 @@
     },
     {
       "name": "ChatAFL (NDSS'24)",
-      "url": "https://arxiv.org/abs/2306.12445",
+      "url": "https://www.ndss-symposium.org/ndss-paper/large-language-model-guided-protocol-fuzzing/",
       "category": "Research Papers",
       "type": "paper",
       "stars": null,
@@ -1885,6 +1973,17 @@
       "note": "Live symmetric attack-and-defense benchmark: two agents attack and patch concurrently over changing services (12 frontier agents, 40 challenges, 466 matches)"
     },
     {
+      "name": "DoGNAVY-Exploit",
+      "url": "https://arxiv.org/abs/2611.04196",
+      "category": "Research Papers",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.0,
+      "note": "Stage-aware, parallel multi-agent exploitation harness for open-weight models (Nov 2026): reports 97.5% Pass@1 on Cybench and CVE-Bench zero-day, and beats Claude Code baselines on ExploitGym"
+    },
+    {
       "name": "Getting started with Mantis (Google)",
       "url": "https://cloud.google.com/blog/products/identity-security/getting-started-with-the-mantis-harness-to-find-and-fix-bugs",
       "category": "Talks, Blogs & Writing",
@@ -1908,7 +2007,7 @@
     },
     {
       "name": "HackSynth",
-      "url": "https://arxiv.org/abs/2412.01777",
+      "url": "https://arxiv.org/abs/2412.01778",
       "category": "Research Papers",
       "type": "paper",
       "stars": null,
@@ -1940,15 +2039,15 @@
       "note": "AI-risk lab running AI-vs-human CTF tracks and offensive-capability elicitation studies"
     },
     {
-      "name": "PENTEST-AI Framework Survey",
-      "url": "https://arxiv.org/abs/2502.16725",
+      "name": "PENTEST-AI (IEEE CSR'24)",
+      "url": "https://doi.org/10.1109/CSR61664.2024.10679480",
       "category": "Research Papers",
       "type": "paper",
       "stars": null,
       "last_commit": null,
       "archived": false,
       "rating": 3.0,
-      "note": "Survey / framing of AI-driven penetration testing"
+      "note": "LLM multi-agent framework for automating pentests, mapped to MITRE ATT&CK, with a proof of concept (IEEE CSR 2024)"
     },
     {
       "name": "ProtoArena",
@@ -2004,6 +2103,17 @@
       "archived": false,
       "rating": 2.9,
       "note": "Zero-shot LLM call-chain vuln discovery; found 0-days in production Python"
+    },
+    {
+      "name": "GhidrAssistMCP",
+      "url": "https://github.com/symgraph/GhidrAssistMCP",
+      "category": "Reverse Engineering Agents",
+      "type": "open-source",
+      "stars": 808,
+      "last_commit": "2026-10-09T18:32:10Z",
+      "archived": false,
+      "rating": 2.9,
+      "note": "Native Ghidra MCP extension with security-sensitive tool gating"
     },
     {
       "name": "awesome-ai-cybersecurity",
@@ -2114,6 +2224,17 @@
       "archived": false,
       "rating": 2.8,
       "note": "LLM agents that generate, run and triage Google dorks (Serper/SerpApi) for bug-bounty recon"
+    },
+    {
+      "name": "BurpMCP-Ultra",
+      "url": "https://github.com/Cy-S3c/BurpMCP-Ultra",
+      "category": "Security MCP Servers",
+      "type": "open-source",
+      "stars": 297,
+      "last_commit": "2026-09-28T03:59:31Z",
+      "archived": false,
+      "rating": 2.8,
+      "note": "Community MCP server for Burp Suite Professional with ~149 tools: proxy history, scanner, inline fuzzer, race conditions, guided injection, JWT/IDOR attacks"
     },
     {
       "name": "BruteForceAI",
@@ -2549,11 +2670,11 @@
       "url": "https://github.com/morluto/rea",
       "category": "Reverse Engineering Agents",
       "type": "open-source",
-      "stars": 445640,
+      "stars": 447667,
       "last_commit": "2026-11-09T13:39:34Z",
       "archived": false,
       "rating": 2.0,
-      "note": "Local CLI/MCP for agent-assisted RE of native/.NET/JS. Star count looks anomalously high (created 2026-04-14) and is excluded from rating."
+      "note": "Local CLI/MCP for agent-assisted RE of native/.NET/JS, used as a backend by other RE agents (e.g. Eleven) and the subject of the Awesome-REA list. Star/fork counts (447k/110k, created 2026-04-14) look anomalous and are excluded from the rating."
     },
     {
       "name": "ReconAIzer",
@@ -2688,6 +2809,17 @@
       "note": "Docker MCP exposing 100+ Kali tools as plugins"
     },
     {
+      "name": "42-b3yond-6ug CRS",
+      "url": "https://github.com/42-b3yond-6ug/42-b3yond-6ug-crs",
+      "category": "LLM Fuzzing & Cyber Reasoning Systems",
+      "type": "open-source",
+      "stars": 31,
+      "last_commit": "2025-08-19T20:19:01Z",
+      "archived": false,
+      "rating": 1.7,
+      "note": "Team 42-b3yond-6ug's AIxCC Final Cyber Reasoning System: LLM-assisted fuzzing, triage and patching"
+    },
+    {
       "name": "InterCode",
       "url": "https://github.com/princeton-nlp/intercode",
       "category": "Benchmarks & Datasets",
@@ -2807,17 +2939,6 @@
       "archived": false,
       "rating": 1.3,
       "note": "Beam Search/MCTS attack-path planning MCP for CTF/pentest"
-    },
-    {
-      "name": "42-b3yond-6ug CRS",
-      "url": "https://github.com/42-b3yond-6ug/42-b3yond-6ug-crs",
-      "category": "LLM Fuzzing & Cyber Reasoning Systems",
-      "type": "open-source",
-      "stars": 31,
-      "last_commit": "2025-08-19T20:19:01Z",
-      "archived": false,
-      "rating": 1.2,
-      "note": "Team 42-b3yond-6ug's AIxCC Final Cyber Reasoning System: LLM-assisted fuzzing, triage and patching"
     },
     {
       "name": "42-b3yond-6ug ASC",

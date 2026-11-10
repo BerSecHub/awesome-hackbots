@@ -54,12 +54,12 @@ BOOSTS = {
     "xbow.com": 1.5,
     "josephthacker.com": 1.0,
     "aicyberchallenge.com": 1.5,
-    "arxiv.org/abs/2308.02167": 1.2,
+    "arxiv.org/abs/2308.06782": 1.2,  # PentestGPT (USENIX'24); was 2308.02167 (wrong paper)
     "arxiv.org/abs/2402.06664": 1.0,
     "arxiv.org/abs/2409.16165": 1.0,
     "arxiv.org/abs/2408.08926": 1.0,
     "arxiv.org/abs/2503.17332": 1.0,
-    "arxiv.org/abs/2505.14534": 0.8,
+    "arxiv.org/abs/2505.15216": 0.8,  # BountyBench paper; was 2505.14534 (wrong paper)
     "arxiv.org/abs/2602.07666": 1.0,
     "portswigger/mcp-server": 0.8,
     "0x4m4/hexstrike-ai": 0.8,
@@ -98,6 +98,13 @@ BOOSTS = {
     "geekcon.top": 0.5,
     "arcanum-sec.com": 0.6,
     "cloud.google.com/blog/topics/threat-intelligence/artex-and-friends": 0.8,
+    # 2026-11-10 verified additions (modest; same rubric).
+    # Incalmo is +0.3 so the verified 3.2 holds (formula alone rounds to 2.9).
+    "gadievron/raptor": 0.4,
+    "cylabcyberautonomy/incalmo": 0.3,
+    "openai.com/index/introducing-gpt-6-cyber": 0.8,
+    # 6th at the AIxCC Final. Key includes -crs so the archived ASC repo is not boosted.
+    "42-b3yond-6ug/42-b3yond-6ug-crs": 0.5,
 }
 
 # Above this, a star total is not credible adoption for this list (REA: ~393k
@@ -331,7 +338,13 @@ def apply_ratings(doc: dict) -> None:
         note = re.sub(r"\s{2,}", " ", note).strip()
         if p.get("archived") and "[ARCHIVED]" not in note:
             note = f"{note} [ARCHIVED]".strip()
-        if stars_anomalous(p.get("stars")) and "excluded from rating" not in note.lower():
+        # Accept "excluded from the rating" as well, so a note that already
+        # explains the exclusion is not given a second boilerplate sentence.
+        lowered = note.lower()
+        already_excluded = (
+            "excluded from rating" in lowered or "excluded from the rating" in lowered
+        )
+        if stars_anomalous(p.get("stars")) and not already_excluded:
             note = f"{note} Star count excluded from rating (looks anomalously high).".strip()
         p["note"] = note
     doc["projects"].sort(key=_sort_key)
