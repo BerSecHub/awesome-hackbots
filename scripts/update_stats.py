@@ -105,6 +105,10 @@ BOOSTS = {
     "openai.com/index/introducing-gpt-6-cyber": 0.8,
     # 6th at the AIxCC Final. Key includes -crs so the archived ASC repo is not boosted.
     "42-b3yond-6ug/42-b3yond-6ug-crs": 0.5,
+    # 2026-11-11 verified additions (modest; same 0.4–1.5 rubric).
+    "ctf.huntress.com/events": 0.5,
+    "research.checkpoint.com/2026/hacking-on-autopilot": 0.5,
+    "arxiv.org/abs/2611.10723": 0.5,
 }
 
 # Above this, a star total is not credible adoption for this list (REA: ~393k
