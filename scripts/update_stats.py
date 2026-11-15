@@ -109,6 +109,12 @@ BOOSTS = {
     "ctf.huntress.com/events": 0.5,
     "research.checkpoint.com/2026/hacking-on-autopilot": 0.5,
     "arxiv.org/abs/2611.10723": 0.5,
+    # 2026-11-15 verified additions (modest; same 0.4–1.5 rubric).
+    "s1n6h/pentest-harness": 0.4,
+    "arxiv.org/abs/2611.16565": 0.5,
+    "arxiv.org/abs/2611.06257": 0.5,
+    "arxiv.org/abs/2609.34450": 0.5,
+    "aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities": 1.0,
 }
 
 # Above this, a star total is not credible adoption for this list (REA: ~393k
