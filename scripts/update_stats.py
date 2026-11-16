@@ -115,6 +115,18 @@ BOOSTS = {
     "arxiv.org/abs/2611.06257": 0.5,
     "arxiv.org/abs/2609.34450": 0.5,
     "aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities": 1.0,
+    # 2026-11-16 verified additions (modest; same 0.4–1.5 rubric).
+    # HTTP Terminator repo is +0.5 so the verified 2.7 holds (formula alone ~2.2).
+    # Key includes the github owner/repo slash so it does not also match the write-up.
+    "portswigger/http-terminator": 0.5,
+    # BH USA/DEF CON 2026 write-up; paper base 3.0 + 1.0 = 4.0.
+    "portswigger.net/research/http-terminator": 1.0,
+    # James Kettle profile; paper base 3.0 + 0.8 = 3.8 (same band as Sean Heelan).
+    "portswigger.net/research/james-kettle": 0.8,
+    # Snyk VulnBench 2.0 is +0.3 so the verified 3.3 holds (paper base is 3.0).
+    "arxiv.org/abs/2610.38617": 0.3,
+    # FBI FLASH on ARTEX; paper base 3.0 + 0.5 = 3.5 (same band as the Check Point advisory).
+    "ic3.gov/csa/2026/261113": 0.5,
 }
 
 # Above this, a star total is not credible adoption for this list (REA: ~393k
