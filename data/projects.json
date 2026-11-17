@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-16T13:26:43.634841+00:00",
+    "generated_at": "2026-11-17T06:27:44.379893+00:00",
     "timezone_note": "Europe/Warsaw (UTC+1)",
-    "entry_count": 291,
+    "entry_count": 300,
     "rating_rubric": {
       "scale": "1.0\u20135.0",
       "open_source": "0.5 base + star_component(\u22642.0 using log10 of min(stars,50000); stars above 100000 score 0 and display as n/a) + maintenance(\u22641.5) + prestige boost(\u22641.5); archived capped at 2.5",
@@ -255,6 +255,17 @@
       "archived": false,
       "rating": 4.1,
       "note": "Minimal research framework for LLM Linux priv-esc (~50 LOC)"
+    },
+    {
+      "name": "Burp Suite MCP Server",
+      "url": "https://github.com/danielgallen/mcp-server",
+      "category": "Security MCP Servers",
+      "type": "open-source",
+      "stars": 1271,
+      "last_commit": "2026-11-05T09:04:33Z",
+      "archived": false,
+      "rating": 4.1,
+      "note": "Official Burp Suite MCP extension (Streamable HTTP + SSE, stdio proxy, Codex plugin), developed by PortSwigger engineer Daniel Allen; PortSwigger/mcp-server is now a fork of this repo, which holds the stars and history"
     },
     {
       "name": "Cybench",
@@ -532,6 +543,17 @@
       "note": "Detect-Exploit-Patch evaluation on real bug bounties"
     },
     {
+      "name": "GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold/",
+      "category": "Talks, Blogs & Writing",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.8,
+      "note": "Google GTIG/Mandiant (16 Nov 2026): first observed fully autonomous patch-diff-to-exploit pipeline (exploit_agent) hitting French web targets with no human in the loop, plus ARTEX/CAIRN/CyberStrikeAI/HexStrike abuse and LLMjacking"
+    },
+    {
       "name": "James Kettle (@albinowax)",
       "url": "https://portswigger.net/research/james-kettle",
       "category": "People & Communities",
@@ -731,14 +753,14 @@
     },
     {
       "name": "TPCTF 2026 Agent Track (CCF / Tsinghua)",
-      "url": "https://ctfy.tsinghua.edu.cn/competitions/c0d8b4e3dd3b42c095d63d7dfa66431f/rules",
+      "url": "https://ctfy.tsinghua.edu.cn/competitions/c0d8b4e3dd3b42c095d63d7dfa66431f/summary",
       "category": "Competitions",
       "type": "event",
       "stars": null,
       "last_commit": null,
       "archived": false,
       "rating": 3.7,
-      "note": "CCF 'Jinghua Cup' TPCTF 2026 (Tsinghua/PKU): 48h competition from 15 Nov 2026 with a dedicated track for fully autonomous AI agents solving CTF challenges without human intervention"
+      "note": "CCF 'Jinghua Cup' TPCTF 2026 (Tsinghua/PKU) track for fully autonomous AI agents (no human intervention); final ended 14 Nov 2026: 520 teams, 5 challenges, r0sky and 0ops tied 1st (1,421 pts, 5/5 solves), wsincos 3rd"
     },
     {
       "name": "Claude-BugHunter",
@@ -959,6 +981,17 @@
       "archived": false,
       "rating": 3.5,
       "note": "Pentest reporting platform with AI agent drafting findings"
+    },
+    {
+      "name": "Cairn weaponized for autonomous attacks (Unit 42)",
+      "url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/",
+      "category": "Talks, Blogs & Writing",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.5,
+      "note": "Unit 42 (12 Nov 2026): China-nexus cluster CL-STA-1238 paired the open-source Cairn pentest agent with GLM/DeepSeek for 25 autonomous operations against 19+ orgs (semiconductor, US defense policy, civil society), succeeding at 10"
     },
     {
       "name": "CyberBinGym",
@@ -1377,17 +1410,6 @@
       "archived": false,
       "rating": 3.3,
       "note": "Arm agentic framework for deep semantic security code review"
-    },
-    {
-      "name": "Burp Suite MCP Server",
-      "url": "https://github.com/PortSwigger/mcp-server",
-      "category": "Security MCP Servers",
-      "type": "open-source",
-      "stars": 11,
-      "last_commit": "2026-11-05T16:44:33Z",
-      "archived": false,
-      "rating": 3.3,
-      "note": "Official PortSwigger Burp \u2194 AI clients via MCP"
     },
     {
       "name": "Snyk VulnBench 2.0: SAST vs AI Security Agents",
@@ -1819,17 +1841,6 @@
       "note": "Neurosymbolic SAST combining LLMs with CodeQL for Java"
     },
     {
-      "name": "OpenHack",
-      "url": "https://github.com/openhackai/OpenHack",
-      "category": "Code Auditing & SAST Agents",
-      "type": "open-source",
-      "stars": 444,
-      "last_commit": "2026-10-17T02:50:04Z",
-      "archived": false,
-      "rating": 3.1,
-      "note": "Agentic security scanner using exclusively open-source models"
-    },
-    {
       "name": "cyber-harness",
       "url": "https://github.com/chainreactors/cyber-harness",
       "category": "Autonomous Pentest Agents",
@@ -1971,6 +1982,17 @@
       "archived": false,
       "rating": 3.0,
       "note": "IDA Pro LLM plugin: explanations, rename, RAG, knowledge graph"
+    },
+    {
+      "name": "Caido Skills (caido-mode)",
+      "url": "https://github.com/caido/skills",
+      "category": "Bug Bounty & Recon",
+      "type": "open-source",
+      "stars": 290,
+      "last_commit": "2026-11-08T23:21:37Z",
+      "archived": false,
+      "rating": 3.0,
+      "note": "Official Caido agent skill for Claude Code/Codex-style agents: HTTPQL history search, curl testing proxied through Caido with cached auth, match & replace rules, replay-session handoffs"
     },
     {
       "name": "Vulnerator-AI",
@@ -2149,6 +2171,17 @@
       "note": "Live symmetric attack-and-defense benchmark: two agents attack and patch concurrently over changing services (12 frontier agents, 40 challenges, 466 matches)"
     },
     {
+      "name": "CyberDual: AI Attackers versus AI Code Reviewers",
+      "url": "https://arxiv.org/abs/2610.34435",
+      "category": "Benchmarks & Datasets",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.0,
+      "note": "Execution-judged arena: attacker agents hide exploitable bugs in real OSS maintenance commits, reviewer agents hunt them; reviewers catch 85-91% of 1,088 attacks but ~1 in 6 spread-out attacks still ship a working PoC (Oct 2026)"
+    },
+    {
       "name": "DoGNAVY-Exploit",
       "url": "https://arxiv.org/abs/2611.04196",
       "category": "Research Papers",
@@ -2226,6 +2259,17 @@
       "note": "LLM multi-agent framework for automating pentests, mapped to MITRE ATT&CK, with a proof of concept (IEEE CSR 2024)"
     },
     {
+      "name": "ProcReverser: Multi-Agent Microarchitectural Reverse Engineering",
+      "url": "https://arxiv.org/abs/2611.20827",
+      "category": "Reverse Engineering Agents",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.0,
+      "note": "Multi-agent system that designs, runs and refines black-box experiments to recover Spectre-relevant CPU properties (speculation, branch prediction, caches); Pass@1 81-83% on XuanTie C910 and gem5 O3, also SiFive P550 (Nov 2026)"
+    },
+    {
       "name": "ProtoArena",
       "url": "https://arxiv.org/abs/2610.17837",
       "category": "Research Papers",
@@ -2270,6 +2314,28 @@
       "note": "Multi-agent harness turning candidate web vuln findings into verified Proofs of Exploitability; 10/25 real advisories on new WebExploitGym, plus 4 never-reported PoEs"
     },
     {
+      "name": "Validating AI-Discovered Cloud Threats on Live Infrastructure",
+      "url": "https://arxiv.org/abs/2611.10947",
+      "category": "Research Papers",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.0,
+      "note": "Multi-agent cloud threat discovery + automated exploit synthesis + non-destructive live validation on AWS/GCP/Azure: 103 of 233 AI-found threats confirmed (75% precision); model ensembles find 2.2x more confirmed threats (Nov 2026)"
+    },
+    {
+      "name": "VAST: Verifiable Multi-Step Environments for LLM Red-Team Agents",
+      "url": "https://arxiv.org/abs/2611.19465",
+      "category": "Benchmarks & Datasets",
+      "type": "paper",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.0,
+      "note": "Declarative range compiler turning grounded vulnerability scenarios (109 seed edges, 45 CVE-annotated) into 1,387 verifiable multi-step instances with tunable workflow hardening for diagnosing red-team agent failures (Nov 2026)"
+    },
+    {
       "name": "Vulnhuntr",
       "url": "https://github.com/protectai/vulnhuntr",
       "category": "Code Auditing & SAST Agents",
@@ -2312,6 +2378,17 @@
       "archived": false,
       "rating": 2.9,
       "note": "Skills, Goals, Dynamic Workflows for security auditing"
+    },
+    {
+      "name": "caido-mcp-server",
+      "url": "https://github.com/c0tton-fluff/caido-mcp-server",
+      "category": "Security MCP Servers",
+      "type": "open-source",
+      "stars": 152,
+      "last_commit": "2026-11-16T15:48:34Z",
+      "archived": false,
+      "rating": 2.9,
+      "note": "Go MCP server + CLI for the Caido proxy: 76 tools to search HTTPQL history, replay/diff requests and drive web testing from Claude Code or Cursor"
     },
     {
       "name": "Heimdall",
@@ -2391,6 +2468,17 @@
       "note": "Offensive agentic AI: projects, papers, commercial"
     },
     {
+      "name": "OpenHack",
+      "url": "https://github.com/openhackai/OpenHack",
+      "category": "Code Auditing & SAST Agents",
+      "type": "open-source",
+      "stars": 444,
+      "last_commit": "2026-10-17T02:50:04Z",
+      "archived": false,
+      "rating": 2.8,
+      "note": "Agentic security scanner using exclusively open-source models"
+    },
+    {
       "name": "HackBot",
       "url": "https://github.com/morpheuslord/HackBot",
       "category": "Bug Bounty & Recon",
@@ -2400,6 +2488,17 @@
       "archived": false,
       "rating": 2.8,
       "note": "LLaMA-based cybersecurity chatbot for scan/code analysis"
+    },
+    {
+      "name": "h1-brain",
+      "url": "https://github.com/PatrikFehrenbach/h1-brain",
+      "category": "Bug Bounty & Recon",
+      "type": "open-source",
+      "stars": 360,
+      "last_commit": "2026-10-13T07:37:19Z",
+      "archived": false,
+      "rating": 2.8,
+      "note": "MCP server linking AI assistants to HackerOne: syncs your reports, program scopes and 3,600+ disclosed bounty reports into SQLite; hack(handle) builds a per-program hunting briefing (scope, past findings, untouched assets)"
     },
     {
       "name": "DorkAgent",

@@ -61,7 +61,7 @@ BOOSTS = {
     "arxiv.org/abs/2503.17332": 1.0,
     "arxiv.org/abs/2505.15216": 0.8,  # BountyBench paper; was 2505.14534 (wrong paper)
     "arxiv.org/abs/2602.07666": 1.0,
-    "portswigger/mcp-server": 0.8,
+    "danielgallen/mcp-server": 0.8,
     "0x4m4/hexstrike-ai": 0.8,
     "mrexodia/ida-pro-mcp": 0.6,
     "lauriewired/ghidramcp": 0.6,
@@ -127,6 +127,11 @@ BOOSTS = {
     "arxiv.org/abs/2610.38617": 0.3,
     # FBI FLASH on ARTEX; paper base 3.0 + 0.5 = 3.5 (same band as the Check Point advisory).
     "ic3.gov/csa/2026/261113": 0.5,
+    # 2026-11-17 verified additions (modest; same 0.4-1.5 rubric).
+    # Unit 42 Cairn report; paper base 3.0 + 0.5 = 3.5, same band as Check Point/FBI ARTEX.
+    "unit42.paloaltonetworks.com/cairn-framework": 0.5,
+    # GTIG AI Threat Tracker; 3.8, same as the GTIG ARTEX post.
+    "agentic-threat-activity-crosses-a-significant-threshold": 0.8,
 }
 
 # Above this, a star total is not credible adoption for this list (REA: ~393k
