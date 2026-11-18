@@ -120,7 +120,8 @@ BOOSTS = {
     # Key includes the github owner/repo slash so it does not also match the write-up.
     "portswigger/http-terminator": 0.5,
     # BH USA/DEF CON 2026 write-up; paper base 3.0 + 1.0 = 4.0.
-    "portswigger.net/research/http-terminator": 1.0,
+    # Canonical slug changed 2026-11-18; /research/http-terminator redirects here.
+    "portswigger.net/research/can-ai-do-novel-security-research": 1.0,
     # James Kettle profile; paper base 3.0 + 0.8 = 3.8 (same band as Sean Heelan).
     "portswigger.net/research/james-kettle": 0.8,
     # Snyk VulnBench 2.0 is +0.3 so the verified 3.3 holds (paper base is 3.0).
@@ -132,6 +133,15 @@ BOOSTS = {
     "unit42.paloaltonetworks.com/cairn-framework": 0.5,
     # GTIG AI Threat Tracker; 3.8, same as the GTIG ARTEX post.
     "agentic-threat-activity-crosses-a-significant-threshold": 0.8,
+    # 2026-11-18 verified additions (modest; same 0.4-1.5 rubric).
+    # Trident (Layer8) HackerOne VDP #1; commercial base 3.2 + 0.4 = 3.6.
+    "layer8.jp/en/blog/hackerone-vdp-2026-q3-first-place": 0.4,
+    # Dawn Song / Berkeley RDI; paper base 3.0 + 0.8 = 3.8 (same band as Sean Heelan / James Kettle).
+    "dawnsong.io": 0.8,
+    # Daniel Kang / UIUC Kang Lab; paper base 3.0 + 0.6 = 3.6.
+    "ddkang.github.io": 0.6,
+    # gori is +0.1 so the verified 3.0 holds (formula alone rounds to 2.9).
+    "hahwul/gori": 0.1,
 }
 
 # Above this, a star total is not credible adoption for this list (REA: ~393k
