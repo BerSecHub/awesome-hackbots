@@ -142,6 +142,11 @@ BOOSTS = {
     "ddkang.github.io": 0.6,
     # gori is +0.1 so the verified 3.0 holds (formula alone rounds to 2.9).
     "hahwul/gori": 0.1,
+    # 2026-11-19 verified additions (modest; same 0.4-1.5 rubric).
+    # RuoJi6/ARTEX: Baidu Agent+ challenge winner and widely reported (FBI FLASH, GTIG).
+    # Owner/repo key so write-ups that already mention ARTEX in the path are not boosted again.
+    # sapper-v2 is intentionally absent: its contest results are self-reported.
+    "ruoji6/artex": 0.5,
 }
 
 # Above this, a star total is not credible adoption for this list (REA: ~393k
@@ -230,7 +235,13 @@ def maint_component(last_commit: str | None, archived: bool, now: datetime) -> f
         return 0.0
     if not last_commit:
         return 0.4
-    dt = datetime.fromisoformat(last_commit.replace("Z", "+00:00"))
+    raw = last_commit.strip().replace("Z", "+00:00")
+    # Non-GitHub entries (and a rate-limit fallback) may store a bare YYYY-MM-DD.
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", raw):
+        raw += "T00:00:00+00:00"
+    dt = datetime.fromisoformat(raw)
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
     days = (now - dt).days
     if days <= 30:
         return 1.5
@@ -582,7 +593,7 @@ def render_readme(doc: dict) -> str:
         "",
         "---",
         "",
-        f"<sub>Maintained by [Rafał Gacek (BerSec)](https://github.com/BerSecHub) · Polish pentester (OSCP / BSCP / AIRTP+) · "
+        f"<sub>Maintained by [Rafael Gacek (BerSec)](https://github.com/BerSecHub) · Polish pentester (OSCP / BSCP / AIRTP+) · "
         f"Stats generated {gen_day} UTC · {len(projects)} entries</sub>",
         "",
     ]

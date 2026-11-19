@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-11-18T06:37:51.154982+00:00",
+    "generated_at": "2026-11-19T06:34:57.482361+00:00",
     "timezone_note": "Europe/Warsaw (UTC+1)",
-    "entry_count": 308,
+    "entry_count": 316,
     "rating_rubric": {
       "scale": "1.0\u20135.0",
       "open_source": "0.5 base + star_component(\u22642.0 using log10 of min(stars,50000); stars above 100000 score 0 and display as n/a) + maintenance(\u22641.5) + prestige boost(\u22641.5); archived capped at 2.5",
@@ -47,16 +47,6 @@
         "name": "HackerOne Hai",
         "url": "https://www.hackerone.com/",
         "reason": "Duplicate of https://www.hackerone.com/ai; kept the /ai entry"
-      },
-      {
-        "name": "sapper-v2",
-        "url": "https://github.com/N1nEmAn/sapper-v2",
-        "reason": "Held back pending verification: unusual fork/star ratio and contest claims only self-reported"
-      },
-      {
-        "name": "prtseek",
-        "url": "https://github.com/Team-intN18-SoybeanSeclab/prtseek",
-        "reason": "ARTEX-derived: README states it is secondary development of RuoJi6/ARTEX (originally Autumn-27/ARTEX), keeps Go module path github.com/Autumn-27/artex and AGPL license; 185 Go files import github.com/Autumn-27/artex/* packages and build scripts keep ARTEX_* env fallbacks. Bundles ARTEX code -> excluded by safety policy"
       }
     ],
     "last_fetch_ok": 204,
@@ -482,6 +472,17 @@
       "note": "Claude Code-based autonomous offensive/defensive research framework (rules, sub-agents, skills for scanning, fuzzing, exploit and patch generation) by Gadi Evron, Daniel Cuthbert and Thomas Dullien (Halvar Flake)"
     },
     {
+      "name": "ARTEX",
+      "url": "https://github.com/RuoJi6/ARTEX",
+      "category": "Autonomous Pentest Agents",
+      "type": "open-source",
+      "stars": 2270,
+      "last_commit": "2026-11-14T13:19:44Z",
+      "archived": false,
+      "rating": 3.9,
+      "note": "Self-hosted Go/Next.js multi-agent pentest platform (independently maintained continuation preserving Autumn-27's original history, AGPL-3.0; English edition: BaaRai/ARTEX, ~9.8k stars). Reported abused in real intrusions since Aug 2026: FBI FLASH https://www.ic3.gov/CSA/2026/261113.pdf, Google GTIG https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks"
+    },
+    {
       "name": "Semgrep",
       "url": "https://github.com/semgrep/semgrep",
       "category": "Code Auditing & SAST Agents",
@@ -732,7 +733,7 @@
       "last_commit": null,
       "archived": false,
       "rating": 3.7,
-      "note": "GEEKCON (ex-GeekPwn) 2-hour on-site AI hacking challenge, Shanghai, 24 Oct 2026: teams' AI agents attacked undisclosed real targets (office apps, LLM inference servers, cameras, robots); 11 successful compromises"
+      "note": "GEEKCON (ex-GeekPwn) 2-hour on-site AI hacking challenge, Shanghai, 24 Oct 2026: teams' AI agents attacked undisclosed real targets (office apps, LLM inference servers, cameras, robots); won by Tsinghua's RedbudAI multi-agent team"
     },
     {
       "name": "HalCTF (DEF CON 34 AI Village)",
@@ -1120,6 +1121,17 @@
       "note": "Tencent Cloud Yunding Lab platform benchmarking offensive AI agents on real-CVE, multi-stage, cloud and evasion targets (v1: 63 challenges / 74 flags, 6h runs); hosts the Baidu Agent+ 2026 challenge set; public leaderboard"
     },
     {
+      "name": "sapper-v2",
+      "url": "https://github.com/N1nEmAn/sapper-v2",
+      "category": "Frameworks, Skills & Harnesses",
+      "type": "open-source",
+      "stars": 2465,
+      "last_commit": "2026-11-11T12:18:45Z",
+      "archived": false,
+      "rating": 3.4,
+      "note": "Model-agnostic multi-agent pentest harness (commander/soldier/scout roles over Claude Code, Codex, DeepSeek and others; shared memory, self-healing) built for the Tencent Cloud attack-defense CTF on the N\u00fcwa foundation (N1nEmAn/nvwabase). Its contest results (Tencent qualifier champion, GEEKCON 2026 first prize) are self-reported and not independently confirmed."
+    },
+    {
       "name": "open-kritt",
       "url": "https://github.com/Kritt-ai/open-kritt",
       "category": "Code Auditing & SAST Agents",
@@ -1206,17 +1218,6 @@
       "archived": false,
       "rating": 3.4,
       "note": "Dual-graph (causal + attack) plan-execute-reflect pentest agent"
-    },
-    {
-      "name": "Nightcrawler",
-      "url": "https://github.com/garagehq/nightcrawler",
-      "category": "Autonomous Pentest Agents",
-      "type": "open-source",
-      "stars": 872,
-      "last_commit": "2026-08-19T07:21:19Z",
-      "archived": false,
-      "rating": 3.4,
-      "note": "Fully offline autonomous pentest drop-box on a smartphone (OnePlus 8 + NetHunter, 1.2B local LLM on GPU): recon, enumeration, exploitation and report with no cloud; Show HN (120 pts)"
     },
     {
       "name": "Zurp (Meta Bug Bounty)",
@@ -1472,17 +1473,6 @@
       "note": "108 reachable vulns in 20 apps: Snyk Code 82.4% vs Claude Code/Opus 5 79.3% recall, 101/108 combined; harness policy matters; Codex Security, deepsec compared"
     },
     {
-      "name": "JADX MCP Server",
-      "url": "https://github.com/zinja-coder/jadx-mcp-server",
-      "category": "Reverse Engineering Agents",
-      "type": "open-source",
-      "stars": 849,
-      "last_commit": "2026-10-19T00:23:17Z",
-      "archived": false,
-      "rating": 3.2,
-      "note": "MCP for JADX-AI Android APK reverse engineering"
-    },
-    {
       "name": "GhidrAssistMCP",
       "url": "https://github.com/symgraph/GhidrAssistMCP",
       "category": "Reverse Engineering Agents",
@@ -1580,6 +1570,17 @@
       "archived": false,
       "rating": 3.2,
       "note": "MCP for Google SecOps (Chronicle), TI, and security products"
+    },
+    {
+      "name": "HackAgent",
+      "url": "https://github.com/AISecurityLab/hackagent",
+      "category": "LLM Fuzzing & Cyber Reasoning Systems",
+      "type": "open-source",
+      "stars": 541,
+      "last_commit": "2026-11-16T20:26:27Z",
+      "archived": false,
+      "rating": 3.2,
+      "note": "Open-source toolkit that attacks AI agents to find vulnerabilities: automated jailbreak and prompt-injection campaigns (h4rm3l, ToolHijacker tool poisoning, STAC tool chains) with judge models, a dashboard and cloud workers; v0.17-v0.19 shipped in Nov 2026."
     },
     {
       "name": "Mitsu",
@@ -1758,6 +1759,17 @@
       "note": "API security testing with AI-driven discovery and scanning"
     },
     {
+      "name": "Ethiack (Hackian)",
+      "url": "https://ethiack.com/",
+      "category": "Commercial Hackbots",
+      "type": "commercial",
+      "stars": null,
+      "last_commit": null,
+      "archived": false,
+      "rating": 3.2,
+      "note": "Autonomous ethical-hacking/ASM platform built around Hackian, an agentic pentest harness; the 'ethiack' account is ranked on HackerOne's business VDP leaderboard. Hackian 2.0 write-up (10 Nov 2026) shows it reaching 79.1% F1 on their private EthiBench: https://ethiack.com/info-hub/blog/ai-pentesting-harness-matters"
+    },
+    {
       "name": "HackerOne Hai",
       "url": "https://www.hackerone.com/solutions/ai",
       "category": "Commercial Hackbots",
@@ -1923,6 +1935,17 @@
       "note": "Orchestrator+executor LLM agents in Kali container"
     },
     {
+      "name": "Pojun",
+      "url": "https://github.com/chu0119/Pojun",
+      "category": "Autonomous Pentest Agents",
+      "type": "open-source",
+      "stars": 392,
+      "last_commit": "2026-11-19T03:44:59Z",
+      "archived": false,
+      "rating": 3.1,
+      "note": "Chinese autonomous pentest and red-team platform (Go + Next.js + PostgreSQL): multi-agent exploration, vulnerability-intel ops, post-exploitation and C2, with evidence trails (AGPL-3.0, 840+ commits). Describes itself as an independently evolved version of a Baidu attack-defense challenge champion project; companion portable skill: chu0119/pojun-skill."
+    },
+    {
       "name": "BugTraceAI",
       "url": "https://github.com/BugTraceAI/BugTraceAI",
       "category": "Autonomous Pentest Agents",
@@ -2031,6 +2054,17 @@
       "archived": false,
       "rating": 3.0,
       "note": "IDA Pro LLM plugin: explanations, rename, RAG, knowledge graph"
+    },
+    {
+      "name": "Nightcrawler",
+      "url": "https://github.com/garagehq/nightcrawler",
+      "category": "Autonomous Pentest Agents",
+      "type": "open-source",
+      "stars": 872,
+      "last_commit": "2026-08-19T07:21:19Z",
+      "archived": false,
+      "rating": 3.0,
+      "note": "Fully offline autonomous pentest drop-box on a smartphone (OnePlus 8 + NetHunter, 1.2B local LLM on GPU): recon, enumeration, exploitation and report with no cloud; Show HN (120 pts)"
     },
     {
       "name": "Caido Skills (caido-mode)",
@@ -2440,6 +2474,17 @@
       "note": "Beginner-oriented CTF/RE agent-skill bundle: auto-triages challenge category, routes to skills; teaching, competition and hint-only modes (Chinese)"
     },
     {
+      "name": "JADX MCP Server",
+      "url": "https://github.com/zinja-coder/jadx-mcp-server",
+      "category": "Reverse Engineering Agents",
+      "type": "open-source",
+      "stars": 849,
+      "last_commit": "2026-10-19T00:23:17Z",
+      "archived": false,
+      "rating": 2.9,
+      "note": "MCP for JADX-AI Android APK reverse engineering"
+    },
+    {
       "name": "awesome-ai-cybersecurity",
       "url": "https://github.com/ElNiak/awesome-ai-cybersecurity",
       "category": "Related Awesome Lists",
@@ -2627,6 +2672,17 @@
       "note": "CC0 list of security agent harnesses: AI pentest tools, autonomous SOC agents, purple-team / red-vs-blue harnesses, code-audit, fuzzing and RE agents, plus cyber ranges and test environments; updated daily"
     },
     {
+      "name": "prtseek",
+      "url": "https://github.com/Team-intN18-SoybeanSeclab/prtseek",
+      "category": "CTF Solvers & Agents",
+      "type": "open-source",
+      "stars": 61,
+      "last_commit": "2026-11-17T11:11:10Z",
+      "archived": false,
+      "rating": 2.8,
+      "note": "ARTEX-based CTF agent: built on RuoJi6/ARTEX with the SRC-hunting features removed and the pentest workflow turned into a CTF workflow (AGPL-3.0). Shares the ARTEX codebase that the FBI FLASH (https://www.ic3.gov/CSA/2026/261113.pdf) reports as abused."
+    },
+    {
       "name": "BruteForceAI",
       "url": "https://github.com/MorDavid/BruteForceAI",
       "category": "Bug Bounty & Recon",
@@ -2691,6 +2747,17 @@
       "archived": false,
       "rating": 2.7,
       "note": "Single-file agent skill for CTF pwn and binary exploitation: checksec triage -> leak -> write -> exec ladder covering ret2libc/SROP/ret2dlresolve, format strings, tcache/FSOP heap, seccomp ORW and kernel (modprobe_path, commit_creds); outputs a working pwntools exp.py"
+    },
+    {
+      "name": "AgenticPentest",
+      "url": "https://github.com/AaronCaiii/AgenticPentest",
+      "category": "Frameworks, Skills & Harnesses",
+      "type": "open-source",
+      "stars": 52,
+      "last_commit": "2026-11-19T05:22:31Z",
+      "archived": false,
+      "rating": 2.7,
+      "note": "LLM-driven red-team workbench for individual operators and small teams: asset mapping, threat modeling, multi-agent workflows, cloud assessment, scanner integration and portable MCP (MIT, Docker image)."
     },
     {
       "name": "Inspect Cyber",
@@ -3450,6 +3517,17 @@
       "archived": true,
       "rating": 1.0,
       "note": "42-b3yond-6ug CRS from the AIxCC Semifinal Competition (ASC) [ARCHIVED]"
+    },
+    {
+      "name": "Villager (Cyberspike)",
+      "url": "https://pypi.org/project/villager/",
+      "category": "Frameworks, Skills & Harnesses",
+      "type": "open-source",
+      "stars": null,
+      "last_commit": "2025-09-15",
+      "archived": false,
+      "rating": 1.0,
+      "note": "Cyberspike's AI-native pentest framework on PyPI (MCP client + LangChain/DeepSeek, on-demand Kali containers that self-destruct after 24h); last release 0.2.1rc1, no public source repo. Straiker flagged it as a dual-use 'AI-native Cobalt Strike successor' with ~10k downloads: https://www.straiker.ai/blog/cyberspike-villager-cobalt-strike-ai-native-successor"
     }
   ]
 }
