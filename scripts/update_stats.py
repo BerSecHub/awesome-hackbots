@@ -147,6 +147,12 @@ BOOSTS = {
     # Owner/repo key so write-ups that already mention ARTEX in the path are not boosted again.
     # sapper-v2 is intentionally absent: its contest results are self-reported.
     "ruoji6/artex": 0.5,
+    # 2026-11-23 verified additions (modest; same 0.4-1.5 rubric).
+    "mononices/antihydra": 0.4,   # CSAW'26 MENA LLM CTF Attack Competition 2nd place
+    # AWS MadPot ARTEX report; paper base 3.0 + 0.5 = 3.5 (same band as FBI FLASH / Unit 42).
+    "aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex": 0.5,
+    # Microsoft Storm-3358 ARTEX report; paper base 3.0 + 0.4 = 3.4.
+    "microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands": 0.4,
 }
 
 # Above this, a star total is not credible adoption for this list (REA: ~393k
