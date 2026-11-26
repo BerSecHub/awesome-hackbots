@@ -153,6 +153,11 @@ BOOSTS = {
     "aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex": 0.5,
     # Microsoft Storm-3358 ARTEX report; paper base 3.0 + 0.4 = 3.4.
     "microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands": 0.4,
+    # 2026-11-26 verified additions (modest; same 0.4-1.5 rubric).
+    "microsoft.com/en-us/security/blog/2026/11/25/what-defenders-need-to-know-artex": 0.5,
+    "acn.gov.it/portale/w/impiego-di-agenti-di-ia": 0.5,
+    "bacs.admin.ch/en/26-ki-agenten": 0.3,
+    "elastic.co/security-labs/threat-command/agentic-offensive-frameworks": 0.5,
 }
 
 # Above this, a star total is not credible adoption for this list (REA: ~393k
